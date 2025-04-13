@@ -1,0 +1,33 @@
+@use 'vars' as *;
+
+.divider {
+    padding-top: 167px;
+    padding-bottom: 142px;
+    background-color: #fcfeff;
+    &__title {
+        color: #436870;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 5px;
+
+        & > span {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+        }
+    }
+    &__house-icon {
+        color: #47b596;
+        width: 48px;
+        height: 48px;
+    }
+    &__flower-icon {
+        color: #8dc9e4;
+        width: 48px;
+        height: 48px;
+    }
+}

@@ -1,0 +1,66 @@
+@use 'vars' as *;
+.land-design {
+    padding-top: 20px;
+    padding-bottom: 106px;
+    & > .container {
+        display: grid;
+        grid-template-columns: repeat(12, 64px);
+        justify-content: space-between;
+    }
+    &__content {
+        position: relative;
+        max-width: 320px;
+        grid-column: 8/13;
+        & > p {
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+    &__image {
+        grid-column: 1/13;
+        padding-inline: 53px;
+        margin-bottom: 79px;
+        img {
+            width: 100%;
+            object-fit: cover;
+            mask-image: url(../img/mask.png);
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: cover;
+        }
+    }
+    &__sticker {
+        position: absolute;
+        top: -51px;
+        left: -51px;
+        width: 60px;
+        height: 60px;
+
+        & > svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &__title {
+        grid-column: 1/13;
+        justify-self: center;
+        font-size: 46px;
+        margin-bottom: 75px;
+    }
+    &__text {
+        grid-column: 1/13;
+        justify-self: center;
+        margin-bottom: 32px;
+        max-width: 667px;
+        text-align: center;
+        text-wrap: balance;
+    }
+    &__action-element {
+        grid-column: 1/13;
+        justify-self: center;
+        padding-inline: 36px;
+        span {
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+@use 'vars' as *;
+.map-section {
+    margin-top: -71px;
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+    &__map-cover {
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__container {
+        position: relative;
+        flex: 0 0 100%;
+        padding-top: 167px;
+        padding-bottom: 110px;
+    }
+}
+.map-content {
+    background-color: $white;
+    border-radius: 70px 20px 70px 20px;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    padding-left: 38px;
+    padding-right: 64px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+    max-width: max-content;
+    &__title {
+        font-size: 36px;
+        font-weight: 700;
+        & > span {
+            display: block;
+        }
+    }
+    &__btn {
+        height: 56px;
+        max-width: 314px;
+        width: 100%;
+        border: 1px solid #516f75;
+        border-radius: $round-m;
+        font-size: 20px;
+        line-height: 23px;
+        color: #516f75;
+    }
+}
+.map-list {
+    &__item {
+        display: flex;
+        column-gap: 16px;
+        align-items: center;
+        & > svg {
+            width: 48px;
+            height: 48px;
+        }
+        &-title {
+            color: #516f75;
+            font-size: 24px;
+            line-height: 28px;
+        }
+    }
+}

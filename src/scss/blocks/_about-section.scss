@@ -1,0 +1,58 @@
+@use 'vars' as *;
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 197px;
+    padding-bottom: 221px;
+    background-image: image-set(
+        url(../img/about_bg.jpeg) type('image/jpeg') 1x,
+        url(../img/about_bg.webp) type('image/webp') 1x
+    );
+    background-image: -webkit-image-set(url(../img/about_bg.jpeg) 1x, url(../img/about_bg.webp) 1x);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    &__content {
+        padding-top: 44px;
+        padding-right: 37px;
+        padding-left: 28px;
+        padding-bottom: 76px;
+        border-radius: $round-l;
+        background-color: #eff1ec;
+        position: relative;
+        max-width: 380px;
+    }
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 125%;
+        margin-bottom: 15px;
+    }
+    &__text {
+        font-size: 18px;
+        color: #436870;
+        line-height: 125%;
+        text-align: center;
+    }
+    &__sticker {
+        position: absolute;
+        top: -16px;
+        left: -13px;
+        & > svg {
+            width: 32px;
+            height: 32px;
+        }
+    }
+    &__action-element {
+        padding-inline: 36px;
+        font-size: 20px;
+        font-weight: 700;
+        position: absolute;
+        bottom: -27px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+}

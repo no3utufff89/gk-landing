@@ -1,0 +1,20 @@
+@use 'fonts';
+@use 'normalize';
+@use 'reset';
+@use 'vars';
+@use 'global';
+
+@use 'blocks/controls';
+@use 'blocks/common';
+@use 'blocks/nav';
+@use 'blocks/header';
+@use 'blocks/offer-block';
+@use 'blocks/welcome-section';
+@use 'blocks/divider-section';
+@use 'blocks/about-section';
+@use 'blocks/rooms-slider-section';
+@use 'blocks/video-section';
+@use 'blocks/advantages-section';
+@use 'blocks/land-design-section';
+@use 'blocks/request-section';
+@use 'blocks/map-section';

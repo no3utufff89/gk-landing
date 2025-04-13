@@ -1,0 +1,61 @@
+@use 'vars' as *;
+.action-element {
+    color: $white;
+    background: $gradient_1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-inline: 46px;
+    border-radius: $round-m;
+    display: flex;
+    max-width: max-content;
+    box-shadow: $shadow;
+    font-weight: 700;
+    position: relative;
+    & > span {
+        z-index: 3;
+    }
+    &:hover {
+        &::after {
+            opacity: 1;
+        }
+    }
+    &::after {
+        opacity: 0;
+        z-index: 2;
+        transition: opacity 0.5s ease-out;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        position: absolute;
+        border-radius: $round-m;
+        background: $gradient_2;
+    }
+    &_variant {
+        font-size: 20px;
+    }
+}
+.link {
+    position: relative;
+    @include tablet {
+        font-size: 16px;
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+            left: 0;
+        }
+    }
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 1px;
+        background: #313534;
+        transition: all 0.6s ease;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+}

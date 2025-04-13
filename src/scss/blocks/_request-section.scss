@@ -1,0 +1,59 @@
+@use 'vars' as *;
+
+.request-section {
+    padding-top: 115px;
+    padding-bottom: 115px;
+    border-radius: 70px;
+    background-color: #fcfeff;
+    z-index: 2;
+    position: relative;
+    & > .container {
+        display: grid;
+        grid-template-columns: 628px 518px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 37px;
+        color: #436870;
+    }
+    &__text {
+        font-size: 20px;
+        line-height: 23px;
+        color: #516f75;
+        max-width: 350px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+    }
+    &__header {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+    &__info-text {
+        font-size: 14px;
+        color: #516f75;
+    }
+    &__link {
+        color: #15a65e;
+    }
+    &__image {
+        border-radius: 70px 20px 70px 20px;
+        width: 628px;
+        height: 418px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-image: image-set(
+            url(../img/meeting_image.jpeg) type('image/jpeg') 1x,
+            url(../img/meeting_image.webp) type('image/webp') 1x
+        );
+    }
+}

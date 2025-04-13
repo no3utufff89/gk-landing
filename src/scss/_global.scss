@@ -1,0 +1,38 @@
+@use 'vars' as *;
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    color: #436870;
+    background-color: #fcfeff;
+    font-size: 24px;
+    overflow-x: hidden;
+}
+.visually-hidden {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px);
+    /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0 !important;
+    border: 0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;
+}
+.container {
+    margin: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 1440px;
+    @include laptop {
+        max-width: 1215px;
+    }
+    @include tablet {
+        max-width: 567px;
+    }
+    @include mobile {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

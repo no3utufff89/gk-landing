@@ -1,0 +1,52 @@
+@use 'vars' as *;
+
+.rooms-review {
+    padding-top: 80px;
+    padding-bottom: 167px;
+    background-color: #fcfeff;
+    &__header {
+        margin-bottom: 54px;
+    }
+    &__title {
+        text-wrap: balance;
+    }
+    &__action-element {
+        font-size: 24px;
+        padding-top: 17.5px;
+        padding-bottom: 17.5px;
+        padding-inline: 36.5px;
+    }
+}
+.rooms-list {
+    display: flex;
+    column-gap: 16px;
+    align-items: center;
+    &__item {
+        width: 800px;
+        height: 600px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 24px;
+        overflow: hidden;
+    }
+}
+.room {
+    position: relative;
+    &__sticker {
+        position: absolute;
+        background-color: #d5effa;
+        border-radius: 16px;
+        padding: 24px;
+        left: 166px;
+        bottom: -14px;
+        max-width: 232px;
+    }
+    &__desc {
+        color: #516f75;
+        text-wrap: balance;
+        text-align: center;
+    }
+    &__img {
+        object-fit: cover;
+    }
+}
