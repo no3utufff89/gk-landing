@@ -5,7 +5,7 @@ body {
     font-family: Arial, sans-serif;
     font-weight: 400;
     color: #436870;
-    background-color: #fcfeff;
+    background-color: #dcf3fd;
     font-size: 24px;
     overflow-x: hidden;
 }
@@ -22,17 +22,17 @@ body {
 }
 .container {
     margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-    max-width: 1440px;
+    padding-inline: 30px;
+    max-width: 1500px;
     @include laptop {
-        max-width: 1215px;
+        max-width: 1275px;
+        padding-inline: 30px;
     }
     @include tablet {
-        max-width: 567px;
+        max-width: 992px;
     }
     @include mobile {
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }

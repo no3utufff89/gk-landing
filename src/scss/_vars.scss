@@ -16,17 +16,30 @@ $round-m: 20px;
 $round-l: 32px;
 $round-full: 50%;
 //Media queriess
-$mobile: 370px;
-$tablet: 767px;
-$laptop: 1500px;
-
+$mobile: 768px;
+$xl-tablet: 990px;
+$custom: 1000px;
+$tablet: 1260px;
+$laptop: 1520px;
+$transition: 0.3s ease-in-out;
 @mixin laptop {
     @media (max-width: #{$laptop}) {
         @content;
     }
 }
+@mixin xl-tablet {
+    @media (max-width: #{$xl-tablet}) {
+        @content;
+    }
+}
+
 @mixin tablet {
     @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin custom {
+    @media (max-width: #{$custom}) {
         @content;
     }
 }

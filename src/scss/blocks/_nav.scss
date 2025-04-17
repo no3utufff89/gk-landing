@@ -9,7 +9,14 @@
 
     @include laptop {
         justify-self: end;
-        align-self: self-start;
+        padding: 20.5px 10px;
+        width: 55px;
+        height: 55px;
+    }
+    @include tablet {
+    }
+    @include mobile {
+        align-self: auto;
     }
     &__items {
         height: 100%;

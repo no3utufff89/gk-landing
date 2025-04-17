@@ -9,7 +9,30 @@
             </div>
         </div>
         <div class="land-design__image">
-            <img src="@img/land-design.png" alt="Фото ландшафтного дизайна" />
+            <picture>
+                <source
+                    srcset="@img/land-design_xs.webp"
+                    type="image/webp"
+                    media="(max-width: 1000px)"
+                />
+                <source
+                    srcset="@img/land-design_xs.png"
+                    type="image/png"
+                    media="(max-width: 1000px)"
+                />
+                <source
+                    srcset="@img/land-design.webp"
+                    type="image/webp"
+                    media="(min-width: 1000px)"
+                />
+                <source
+                    srcset="@img/land-design.png"
+                    type="image/png"
+                    media="(min-width: 1000px)"
+                />
+                <img src="@img/land-design.png" alt="" />
+            </picture>
+            <!-- <img src="@img/land-design.png" alt="Фото ландшафтного дизайна" /> -->
         </div>
         <h2 class="land-design__title">Ландшафтный уют</h2>
         <p class="land-design__text">

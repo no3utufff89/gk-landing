@@ -1,0 +1,12 @@
+@use 'vars' as *;
+
+.swiper-container {
+    max-width: 1596px;
+    margin: 0 auto;
+    @include laptop {
+        max-width: 1215px;
+    }
+    @include tablet {
+        max-width: 992px;
+    }
+}
