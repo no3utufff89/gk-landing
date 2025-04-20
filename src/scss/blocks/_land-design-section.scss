@@ -1,0 +1,124 @@
+@use 'vars' as *;
+.land-design {
+    background-color: #dbf3fd;
+    padding-top: 45px;
+    padding-bottom: 193px;
+    @include laptop {
+        padding-top: 20px;
+        padding-bottom: 106px;
+    }
+    @include custom {
+        padding-bottom: 44px;
+    }
+    & > .container {
+        display: grid;
+        grid-template-columns: repeat(12, 64px);
+        justify-content: space-between;
+        @include custom {
+            grid-template-columns: repeat(6, auto);
+            justify-content: center;
+        }
+    }
+    &__content {
+        position: relative;
+        max-width: 320px;
+        grid-column: 8/13;
+        @include custom {
+            grid-column: 1/7;
+            justify-self: end;
+            margin-bottom: 38px;
+            max-width: 255px;
+        }
+        & > p {
+            font-size: 20px;
+            line-height: 23px;
+            @include custom {
+                font-size: 16px;
+                line-height: 18px;
+            }
+        }
+    }
+    &__image {
+        grid-column: 1/13;
+        padding-inline: 53px;
+        margin-bottom: 79px;
+        @include custom {
+            grid-column: 1/7;
+            padding: 0;
+        }
+        img {
+            width: 100%;
+            object-fit: cover;
+            mask-image: url(../img/mask.png);
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: cover;
+            @include custom {
+                mask-image: url(../img/mask_xs.png);
+                mask-size: contain;
+            }
+        }
+    }
+    &__sticker {
+        position: absolute;
+        top: -51px;
+        left: -51px;
+        width: 60px;
+        height: 60px;
+        @include mobile {
+            top: -25px;
+            left: -34px;
+        }
+
+        & > svg {
+            width: 32px;
+            height: 32px;
+            @include custom {
+                width: 19px;
+                height: 19px;
+            }
+        }
+    }
+    &__title {
+        grid-column: 1/13;
+        justify-self: center;
+        font-size: 48px;
+        margin-bottom: 51px;
+        @include laptop {
+            font-size: 46px;
+            margin-bottom: 75px;
+        }
+        @include custom {
+            font-size: 24px;
+            grid-column: 1/7;
+            margin-bottom: 16px;
+        }
+    }
+    &__text {
+        grid-column: 1/13;
+        justify-self: center;
+        margin-bottom: 32px;
+        max-width: 667px;
+        text-align: center;
+        text-wrap: balance;
+        font-size: 32px;
+        line-height: 42px;
+        @include laptop {
+            font-size: 24px;
+            line-height: 32px;
+        }
+        @include custom {
+            font-size: 16px;
+            line-height: 18px;
+            grid-column: 1/7;
+        }
+    }
+    &__action-element {
+        grid-column: 1/13;
+        justify-self: center;
+        padding-inline: 36px;
+        span {
+            font-size: 20px;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+@use 'vars' as *;
+
+.house-details-section {
+    background: linear-gradient(180deg, #fcfeff 50%, #f5fcff 83%, #dbf3fd 100%);
+
+    padding-top: 160px;
+    padding-bottom: 160px;
+    overflow: hidden;
+    @include laptop {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    @include mobile {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    &__slider {
+        position: relative;
+        min-width: 0;
+        flex: 1 1 auto;
+    }
+    &__title {
+        font-size: 64px;
+        line-height: 77px;
+        margin-bottom: 85px;
+        max-width: 50%;
+        @include laptop {
+            font-size: 46px;
+            line-height: 58px;
+            max-width: 40%;
+        }
+        @include tablet {
+            max-width: 50%;
+        }
+        @include custom {
+            max-width: 60%;
+        }
+        @include mobile {
+            font-size: 24px;
+            line-height: 29px;
+            max-width: 80%;
+            margin-bottom: 36px;
+        }
+    }
+}
+.house-swiper {
+    overflow: hidden;
+}
+.house-slider {
+    display: flex;
+    height: 100%;
+    @include mobile {
+        margin-bottom: 8px;
+    }
+    &.swiper-wrapper {
+        height: 452px;
+        @include laptop {
+            height: 377px;
+        }
+        @include tablet {
+            height: 277px;
+        }
+    }
+    &__control {
+        @include mobile {
+            display: none;
+        }
+    }
+    &__item {
+        height: 100%;
+        border-radius: 32px;
+        overflow: hidden;
+        position: relative;
+        flex-shrink: 0;
+        &:nth-child(1) {
+            width: 453px;
+            @include laptop {
+                width: 378px;
+            }
+            @include tablet {
+                width: 320px;
+            }
+        }
+        &:nth-child(2) {
+            width: 577px;
+            @include laptop {
+                width: 483px;
+            }
+            @include tablet {
+                width: 320px;
+            }
+        }
+        &:nth-child(3) {
+            width: 329px;
+            @include laptop {
+                width: 274px;
+            }
+            @include tablet {
+                width: 320px;
+            }
+        }
+        &_f {
+            width: 453px;
+            @include laptop {
+                width: 378px;
+            }
+            @include tablet {
+                width: 320px;
+            }
+        }
+        &_s {
+            width: 577px;
+            @include laptop {
+                width: 483px;
+            }
+            @include tablet {
+                width: 320px;
+            }
+        }
+        &_th {
+            width: 329px;
+            @include laptop {
+                width: 274px;
+            }
+            @include tablet {
+                width: 200px;
+            }
+        }
+
+        img {
+            height: 100%;
+        }
+        @include tablet {
+            flex: 0 0 320px;
+            height: 277px;
+        }
+        @media screen and (max-width: 375px) {
+            flex: 0 0 100%;
+        }
+    }
+    &__slide-image {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 2/1;
+    }
+    &__resize-btn {
+        position: absolute;
+        right: 9px;
+        bottom: 11px;
+        transition: $transition;
+        &:hover {
+            background-color: #abdbf2;
+            svg {
+                color: $white;
+            }
+        }
+
+        svg {
+            color: #436870;
+            transition: $transition;
+        }
+    }
+}

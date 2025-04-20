@@ -1,0 +1,298 @@
+@use 'vars' as *;
+.footer {
+    &__top {
+        border-top: 1px solid #00a35166;
+        border-bottom: 1px solid #00a35166;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include mobile {
+            border-top: 1px solid transparent;
+        }
+        & > .container {
+            display: grid;
+            grid-template-columns: 1fr 1.35fr;
+            justify-content: space-between;
+            gap: 80px 15px;
+            @include laptop {
+                grid-template-columns: 29% 66%;
+            }
+            @include tablet {
+                grid-template-columns: 1fr;
+                row-gap: 80px;
+            }
+        }
+    }
+    &__bottom {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        @include mobile {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        & > .container {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            column-gap: 40px;
+            @include tablet {
+                grid-template-columns: 1fr;
+                row-gap: 20px;
+            }
+        }
+    }
+    &__logo-link {
+        max-width: max-content;
+        max-height: max-content;
+        @include tablet {
+            justify-self: center;
+            margin-bottom: -30px;
+        }
+        & > img {
+            width: 403px;
+            height: 155px;
+            @include laptop {
+                width: 277px;
+                height: 107px;
+            }
+            @include tablet {
+                width: 318px;
+                height: 123px;
+            }
+            @include mobile {
+                width: 266px;
+                height: 103px;
+            }
+        }
+    }
+    &__text {
+        font-size: 14px;
+        color: #31353499;
+    }
+    &__copy {
+        color: #313535;
+    }
+
+    &__info-text {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        @include tablet {
+            grid-row: 1/2;
+        }
+    }
+    &__group {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        column-gap: 40px;
+        margin-bottom: 20px;
+        @include tablet {
+            flex-direction: column;
+            row-gap: 20px;
+            grid-row: 2/3;
+            margin-bottom: 10px;
+        }
+    }
+}
+.department {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    column-gap: 20px;
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        max-width: max-content;
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+    &__col {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+    &__subtitle {
+        color: #161a1966;
+        font-size: 16px;
+        line-height: 105%;
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+    &__text {
+        font-size: 18px;
+        color: #313535;
+        max-width: max-content;
+        & > span {
+            display: block;
+        }
+        @include mobile {
+            font-size: 16px;
+        }
+    }
+    &__phones {
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+    }
+}
+
+.footer-menu {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 98px;
+    row-gap: 20px;
+    align-self: self-start;
+    @include mobile {
+        max-width: 405px;
+        column-gap: 0;
+        justify-content: space-between;
+    }
+    &__item {
+    }
+    &__link {
+        font-size: 16px;
+        display: block;
+        max-width: max-content;
+    }
+}
+.questions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include tablet {
+        grid-template-columns: 1fr;
+    }
+    &__title {
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 23px;
+        grid-column: 1/4;
+        grid-row: 1/2;
+        max-width: max-content;
+        margin-bottom: 10px;
+        @include tablet {
+            grid-column: 1/3;
+        }
+    }
+    &__subtitle {
+        font-size: 18px;
+        color: #161a1966;
+        margin-bottom: 18px;
+        grid-column: 1;
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+}
+.questions-form {
+    grid-column: 1/4;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 31% 31% auto;
+    column-gap: 15px;
+    row-gap: 10px;
+    @include tablet {
+        grid-column: 1/2;
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+    }
+    &__input {
+        padding: 15px 16px;
+        border-radius: 10px;
+        outline: none;
+        background-color: $white;
+        height: 53px;
+        width: 100%;
+        border: 1px solid transparent;
+        font-size: 18px;
+        transition: $transition;
+        &:hover {
+            border: 1px solid #46a7df;
+        }
+        &::placeholder {
+            color: #161a1966;
+            font-size: 18px;
+        }
+    }
+    &__input-wrapper {
+        position: relative;
+    }
+    &__placeholder {
+        color: rgba(22, 26, 25, 0.4);
+        padding: 16px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 53px;
+        text-align: left !important;
+        pointer-events: none;
+        user-select: none;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 116%;
+        span {
+            color: #313534;
+        }
+    }
+    &__btn {
+        text-transform: uppercase;
+        color: $white;
+        border-radius: 10px;
+        background-color: #46a7df;
+        box-shadow: 2px 9px 36px 0px rgba(78, 78, 78, 0.25);
+        height: 53px;
+        width: 100%;
+        transition: $transition;
+        &:hover {
+            background-color: #92caea;
+        }
+        @include laptop {
+            font-size: 18px;
+        }
+    }
+    &__text {
+        color: #161a1966;
+        font-size: 12px;
+        grid-column: 3/4;
+        @include tablet {
+            grid-column: 1/2;
+        }
+        & > a {
+            color: #46a7df;
+        }
+    }
+}
+.created {
+    display: flex;
+    column-gap: 10px;
+    align-items: center;
+    grid-column: 2/3;
+    justify-self: end;
+    @include tablet {
+        grid-column: 1/2;
+        justify-self: self-start;
+    }
+    &__text {
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #313535;
+    }
+    &__link {
+        display: block;
+    }
+    &__logo {
+        width: 63px;
+        height: 27px;
+    }
+}

@@ -1,0 +1,97 @@
+@use 'vars' as *;
+
+.final-section {
+    padding-top: 121px;
+    margin-bottom: 125px;
+    background: linear-gradient(180deg, #dbf3fd 0%, #fceed5 40.51%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 1280px;
+    border-bottom-right-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    overflow: hidden;
+    position: relative;
+    @include laptop {
+        padding-top: 90px;
+        height: 866px;
+        margin-bottom: 94px;
+    }
+    @include mobile {
+        height: 365px;
+        padding-top: 40px;
+        margin-bottom: 0;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url(../img/final_bg.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        width: 100vw;
+        height: 901px;
+        @include laptop {
+            height: 676px;
+        }
+        @include mobile {
+            height: 176px;
+        }
+    }
+    &__subtitle {
+        font-size: 24px;
+        text-align: center;
+        @include laptop {
+            font-size: 18px;
+        }
+        @include mobile {
+            font-size: 14px;
+        }
+    }
+    &__title {
+        font-size: 64px;
+        line-height: 74px;
+        text-align: center;
+        text-wrap: balance;
+        @include laptop {
+            font-size: 48px;
+            line-height: 55px;
+        }
+        @include mobile {
+            font-size: 20px;
+            line-height: 23px;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: 44px;
+        align-items: center;
+        @include laptop {
+            row-gap: 32px;
+        }
+        @include mobile {
+            row-gap: 16px;
+        }
+    }
+    &__action-elemet {
+        z-index: 2;
+        @include laptop {
+            font-size: 20px;
+            line-height: 23px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-inline: 30px;
+        }
+        @include mobile {
+            font-size: 14px;
+            line-height: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            padding-inline: 36px;
+        }
+    }
+}

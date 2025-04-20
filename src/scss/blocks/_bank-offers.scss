@@ -1,0 +1,192 @@
+@use 'vars' as *;
+
+.bank-offers {
+    padding-top: 133px;
+    padding-bottom: 133px;
+    background-color: #fcfeff;
+    @include laptop {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    @include laptop {
+        padding-top: 100px;
+    }
+    @include mobile {
+        padding-top: 40px;
+        padding-bottom: 80px;
+    }
+    &__title {
+        font-size: 48px;
+        text-wrap: balance;
+    }
+    &__text {
+        max-width: 557px;
+    }
+    &__content {
+        justify-self: end;
+        row-gap: 21px;
+        @include tablet {
+            justify-self: self-start;
+        }
+        @include mobile {
+            justify-self: self-start;
+            width: 100%;
+        }
+    }
+    &__action-element {
+        padding-top: 26px;
+        padding-bottom: 26px;
+        padding-inline: 83px;
+        @include laptop {
+            font-size: 20px;
+            line-height: 23px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 19px;
+            padding-right: 19px;
+        }
+        @include mobile {
+            font-size: 14px;
+            line-height: 16px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            width: 100%;
+            max-width: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    & > .container {
+        display: flex;
+        flex-direction: column;
+        row-gap: 75px;
+        @include mobile {
+            row-gap: 32px;
+        }
+    }
+}
+.banks-list {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+
+    align-items: center;
+    @include mobile {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 34px);
+    }
+    &__item {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        height: 71px;
+        padding-inline: 6px;
+        @include laptop {
+            height: 60px;
+            padding-inline: 5px;
+        }
+        @include mobile {
+            height: 100%;
+        }
+    }
+}
+.offer-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 40px;
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
+    }
+    @include mobile {
+        column-gap: 15px;
+        margin-bottom: 40px;
+    }
+}
+.offer-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 21px;
+
+    @include laptop {
+        row-gap: 16px;
+    }
+    @include mobile {
+        row-gap: 12px;
+    }
+
+    &:nth-child(3),
+    &:nth-child(4) {
+        @include mobile {
+            grid-column: 2/3;
+            transform: translateY(60px);
+        }
+    }
+    &:nth-child(3) {
+        @include mobile {
+            grid-row: 1/2;
+        }
+    }
+    &:nth-child(4) {
+        @include mobile {
+            grid-row: 2/3;
+        }
+    }
+
+    &__header {
+        height: 375px;
+        overflow: hidden;
+        @include laptop {
+            height: 318px;
+        }
+        @include mobile {
+            height: 160px;
+        }
+    }
+    :nth-child(1) > &__header > img {
+        border-radius: 100px 32px 32px 32px;
+        @include laptop {
+            border-radius: 70px 20px 20px 20px;
+        }
+        @include tablet {
+            border-radius: 20px;
+        }
+    }
+    :last-child > &__header > img {
+        border-radius: 32px 32px 100px 32px;
+        @include laptop {
+            border-radius: 20px 20px 70px 20px;
+        }
+        @include tablet {
+            border-radius: 20px;
+        }
+    }
+
+    &__image {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    &__body {
+    }
+    &__text {
+        font-size: 32px;
+        line-height: 37px;
+        text-wrap: balance;
+
+        @include laptop {
+            font-size: 24px;
+            line-height: 28px;
+            max-width: 90%;
+        }
+        @include mobile {
+            font-size: 16px;
+            line-height: 18px;
+        }
+        @include mobile {
+            max-width: none;
+        }
+    }
+}

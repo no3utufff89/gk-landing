@@ -1,0 +1,119 @@
+@use 'vars' as *;
+
+.video {
+    height: 935px;
+    background-image: image-set(
+        url(../img/video_preview.jpg) type('image/jpeg') 1x,
+        url(../img/video_preview.webp) type('image/webp') 1x
+    );
+    background-image: -webkit-image-set(
+        url(../img/video_preview.jpg) 1x,
+        url(../img/video_preview.webp) 1x
+    );
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 73px;
+    position: relative;
+    z-index: 1;
+    @include laptop {
+        height: 700px;
+    }
+    @include mobile {
+        height: 200px;
+        padding-bottom: 12px;
+    }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        content: '';
+        z-index: -1;
+        background-color: #71717173;
+    }
+    & > .container {
+        height: 100%;
+        align-content: end;
+        position: relative;
+    }
+    &__play-btn {
+        border-radius: $round-full;
+        width: 160px;
+        height: 160px;
+        border: 1px solid $white;
+        background-color: #fcfeff4d;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(16px);
+        transition: $transition;
+        &:hover {
+            background-color: $white;
+            .icon {
+                color: #444444;
+            }
+        }
+        @include laptop {
+            width: 136px;
+            height: 136px;
+        }
+        @include mobile {
+            width: 64px;
+            height: 64px;
+            padding-left: 7px;
+        }
+        & > .icon {
+            width: 58px;
+            height: 58px;
+            color: #fcfeff;
+            @include laptop {
+                width: 49px;
+                height: 49px;
+            }
+            @include mobile {
+                width: 23px;
+                height: 23px;
+            }
+        }
+    }
+    &__title {
+        font-size: 64px;
+        line-height: 112%;
+        color: #ffffff;
+        font-weight: 700;
+        @include laptop {
+            font-size: 56px;
+        }
+        @include tablet {
+            font-size: 26px;
+            max-width: 50%;
+        }
+        @include mobile {
+            font-size: 20px;
+            max-width: none;
+        }
+    }
+    &__text {
+        color: #fcfeff;
+        font-size: 27px;
+        align-self: flex-end;
+        max-width: 495px;
+        @include laptop {
+            font-size: 20px;
+            max-width: 364px;
+        }
+        @include tablet {
+            display: none;
+        }
+    }
+    &__section-header {
+        align-self: flex-end;
+    }
+}

@@ -1,0 +1,50 @@
+//default colours
+$black: #313535;
+$white: #fff;
+
+//layout colours
+$green: #00a351;
+$blue: #46a7df;
+$sky_blue: #92caea;
+$gradient_1: linear-gradient(90deg, rgba(63, 200, 138, 1) 0%, rgba(133, 221, 239, 1) 100%);
+$gradient_2: linear-gradient(90deg, rgba(144, 202, 231, 1) 0%, rgba(12, 163, 84, 1) 100%);
+$shadow: 2px 9px 36px 0px rgba(78, 78, 78, 0.25);
+$transition: 0.3s ease-in-out;
+//rounds
+$round-s: 8px;
+$round-m: 20px;
+$round-l: 32px;
+$round-full: 50%;
+//Media queriess
+$mobile: 768px;
+$xl-tablet: 990px;
+$custom: 1000px;
+$tablet: 1260px;
+$laptop: 1520px;
+$transition: 0.3s ease-in-out;
+@mixin laptop {
+    @media (max-width: #{$laptop}) {
+        @content;
+    }
+}
+@mixin xl-tablet {
+    @media (max-width: #{$xl-tablet}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+@mixin custom {
+    @media (max-width: #{$custom}) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
+        @content;
+    }
+}

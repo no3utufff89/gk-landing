@@ -1,0 +1,131 @@
+@use 'vars' as *;
+
+.offer-block {
+    background-color: $white;
+    border-radius: 48px;
+    border: 4px solid #fcfeff;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 200px auto;
+    column-gap: 19px;
+    align-items: center;
+    max-width: max-content;
+    transition: $transition;
+    @include laptop {
+        grid-template-columns: 168px auto;
+        column-gap: 16px;
+        border-radius: 32px;
+    }
+
+    &__image {
+        border-radius: $round-l;
+        @include laptop {
+            height: 176px;
+        }
+        img {
+            height: 100%;
+        }
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 27px;
+        padding-bottom: 27px;
+        padding-right: 27px;
+        height: 100%;
+        @include laptop {
+            padding-top: 23px;
+            padding-right: 23px;
+            padding-bottom: 23px;
+        }
+    }
+    &__title {
+        color: #516f75;
+        font-size: 18px;
+        line-height: 21px;
+        @include laptop {
+            font-size: 14px;
+            line-height: 16px;
+            max-width: 172px;
+        }
+    }
+
+    &__text {
+        font-weight: 700;
+        z-index: 1;
+        transition: $transition;
+        position: relative;
+        display: block;
+
+        background: $gradient_1;
+        background-clip: text;
+        -webkit-background-clip: text;
+
+        color: transparent;
+        opacity: 1;
+
+        @include laptop {
+            font-size: 18px;
+            max-width: 132px;
+        }
+    }
+    &__link {
+        display: flex;
+        align-items: center;
+
+        transition: 0.2s ease-in-out;
+        &:hover {
+            .offer-block__icon {
+                &::after {
+                    opacity: 1;
+                }
+            }
+            .offer-block__text {
+                background: $gradient_2;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+        }
+    }
+    &__icon {
+        border-radius: $round-full;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(76.81deg, #3fc88a 17.19%, #85ddef 96.91%);
+        flex-shrink: 0;
+        transition: $transition;
+        position: relative;
+        &:after {
+            position: absolute;
+            transition: $transition;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0;
+            background: linear-gradient(314.47deg, #3fc88a 33.83%, #85ddef 68.59%);
+            display: block;
+            border-radius: 100%;
+            content: '';
+        }
+        @include laptop {
+            width: 40px;
+            height: 40px;
+        }
+        & > .icon {
+            width: 15px;
+            height: 25px;
+            color: $white;
+            z-index: 1;
+            position: relative;
+            @include laptop {
+                width: 13px;
+                height: 21px;
+            }
+        }
+    }
+}

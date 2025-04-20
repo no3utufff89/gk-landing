@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/libs/swiper.min.js"></script>
+<script src="js/libs/fancybox.umd.js"></script>
+<script src="js/libs/inputmask.min.js"></script>
+<script type="module" src="js/app.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>главная</title>
+</head>
+
+    <body>
+        <header class="header">
+    <div class="container">
+        <div class="header__row">
+            <a href="#" class="logo-link header__logo-link">
+                <img
+                    src="img/logo.svg"
+                    alt="logo"
+                    class="logo-link__image"
+                    width="200"
+                    height="77"
+                />
+            </a>
+
+            <a href="#" class="header__action-link">
+                <span> Выбрать квартиру </span>
+            </a>
+            <div class="header__phones">
+                <a href="tel:+70000000000" class="link header__phone-link" title="Позвонить"
+                    >+7 000 000 00 00</a
+                >
+                <a href="tel:+70000000000" class="link header__phone-link" title="Позвонить"
+                    >+7 000 000 00 00</a
+                >
+            </div>
+            <div class="burger-menu" role="button" aria-label="Открыть меню">
+                <div class="burger-menu__items">
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <main>
+            <section class="welcome">
+    <div class="container">
+        <div class="welcome__attention">
+            <p>Сдача дома в 2025 <span class="text-gradient">Ключи в этом году</span></p>
+        </div>
+        <div class="welcome__content">
+            <div class="welcome__address">
+                <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#map_icon"></use>
+                </svg>
+                <span> пр. Гагарина, 144 </span>
+            </div>
+            <h1 class="welcome__title">
+                Трёхкомнатная квартира для вашей семьи прямо у парка Швейцария
+            </h1>
+            <div class="welcome__controls">
+                <a href="#" class="action-element welcome__action-element">
+                    <span>Смотреть планировки</span>
+                </a>
+                <a href="#" class="welcome__callback-link"> Оставить заявку </a>
+            </div>
+        </div>
+        <div class="welcome__offer offer-block">
+            <div class="offer-block__image">
+                <picture><source srcset="img/offer_image.webp" type="image/webp"><img src="img/offer_image.png" alt="offer-image" width="200" height="210" /></picture>
+            </div>
+            <div class="offer-block__content">
+                <p class="offer-block__title">3х комнатные квартиры от 100 000 ₽ за м²</p>
+                <a href="#" class="offer-block__link">
+                    <span class="offer-block__text"> Изучить подробнее </span>
+
+                    <span class="offer-block__icon">
+                        <svg class="icon">
+                            <use xlink:href="img/icons/sprite.svg#arrow-down_icon"></use>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="divider">
+    <div class="container">
+        <p class="divider__subtitle">ЖК «Швейцария Парк»</p>
+        <h2 class="divider__title">
+            <span>
+                Живите в
+                <svg class="icon divider__house-icon">
+                    <use xlink:href="img/icons/sprite.svg#house_icon"></use>
+                </svg>
+                городе
+            </span>
+            <span>
+                наедине с
+                <svg class="icon divider__flower-icon">
+                    <use xlink:href="img/icons/sprite.svg#flower_icon"></use>
+                </svg>
+                природой в просторной
+            </span>
+            <span class="divider__title text-gradient">трехкомнатной квартире</span>
+        </h2>
+    </div>
+</section>
+
+            <section class="about">
+    <div class="about__content">
+        <h3 class="about__title">Квартира рядом с парком</h3>
+        <p class="about__text">
+            В 150 м от вашей 3х комнатной квартиры находится крупнейший парк Нижнего Новгорода, где
+            вы сможете насладиться природой и прекрасной прогулкой
+        </p>
+        <div class="sticker about__sticker">
+            <svg>
+                <use xlink:href="img/icons/sprite.svg#sun_icon"></use>
+            </svg>
+        </div>
+        <a href="#" class="action-element about__action-element">
+            <span> Посмотреть квартиры </span>
+        </a>
+    </div>
+</section>
+ <section class="rooms-review">
+    <div class="container">
+        <div class="section-header rooms-review__header">
+            <h2 class="section-header__title rooms-review__title">
+                Комнаты в вашей будущей квартире
+            </h2>
+            <div class="section-header__content">
+                <p class="section-header__text">
+                    Большой выбор трехкомнатных квартир в ЖК «Швейцария Парк»
+                </p>
+                <a href="#" class="action-element rooms-review__action-element">
+                    <span> Смотреть планировки </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="rooms-slider-wrapper slider-wrapper slider-wrapper_active">
+        <ul class="rooms-list swiper-wrapper swiper-box">
+            <li
+                data-fancybox="all"
+                data-src="img/slider/rooms/room_image_01.jpeg"
+                class="rooms-list__item room swiper-slide"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_01.webp" type="image/webp"><img src="img/slider/rooms/room_image_01.jpeg" alt="" class="room__img" /></picture>
+
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="all"
+                data-src="img/slider/rooms/room_image_02.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_02.webp" type="image/webp"><img src="img/slider/rooms/room_image_02.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="all"
+                data-src="img/slider/rooms/room_image_03.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_03.webp" type="image/webp"><img src="img/slider/rooms/room_image_03.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                data-fancybox="all"
+                data-src="img/slider/rooms/room_image_01.jpeg"
+                class="rooms-list__item room swiper-slide"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_01.webp" type="image/webp"><img src="img/slider/rooms/room_image_01.jpeg" alt="" class="room__img" /></picture>
+
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="all"
+                data-src="img/slider/rooms/room_image_02.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_02.webp" type="image/webp"><img src="img/slider/rooms/room_image_02.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+        <div class="room__sticker">
+            <p class="room__desc">Просторная квартира для большой семьи</p>
+        </div>
+    </div>
+    <div class="rooms-slider-wrapper slider-wrapper">
+        <ul class="rooms-list swiper-wrapper swiper-box">
+            <li
+                data-fancybox="living_room"
+                data-src="img/slider/rooms/room_image_02.jpeg"
+                class="rooms-list__item room swiper-slide"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_02.webp" type="image/webp"><img src="img/slider/rooms/room_image_02.jpeg" alt="" class="room__img" /></picture>
+
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="living_room"
+                data-src="img/slider/rooms/room_image_03.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_03.webp" type="image/webp"><img src="img/slider/rooms/room_image_03.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="living_room"
+                data-src="img/slider/rooms/room_image_01.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_01.webp" type="image/webp"><img src="img/slider/rooms/room_image_01.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                data-fancybox="living_room"
+                data-src="img/slider/rooms/room_image_02.jpeg"
+                class="rooms-list__item room swiper-slide"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_02.webp" type="image/webp"><img src="img/slider/rooms/room_image_02.jpeg" alt="" class="room__img" /></picture>
+
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="living_room"
+                data-src="img/slider/rooms/room_image_03.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_03.webp" type="image/webp"><img src="img/slider/rooms/room_image_03.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+        <div class="room__sticker">
+            <p class="room__desc">Просторная гостинная для большой семьи</p>
+        </div>
+    </div>
+    <div class="rooms-slider-wrapper slider-wrapper">
+        <ul class="rooms-list swiper-wrapper swiper-box">
+            <li
+                data-fancybox="bath"
+                data-src="img/slider/rooms/room_image_02.jpeg"
+                class="rooms-list__item room swiper-slide"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_02.webp" type="image/webp"><img src="img/slider/rooms/room_image_02.jpeg" alt="" class="room__img" /></picture>
+
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="bath"
+                data-src="img/slider/rooms/room_image_03.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_03.webp" type="image/webp"><img src="img/slider/rooms/room_image_03.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="bath"
+                data-src="img/slider/rooms/room_image_01.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_01.webp" type="image/webp"><img src="img/slider/rooms/room_image_01.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                data-fancybox="bath"
+                data-src="img/slider/rooms/room_image_02.jpeg"
+                class="rooms-list__item room swiper-slide"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_02.webp" type="image/webp"><img src="img/slider/rooms/room_image_02.jpeg" alt="" class="room__img" /></picture>
+
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+            <li
+                class="rooms-list__item room swiper-slide"
+                data-fancybox="bath"
+                data-src="img/slider/rooms/room_image_03.jpeg"
+            >
+                <picture><source srcset="img/slider/rooms/room_image_03.webp" type="image/webp"><img src="img/slider/rooms/room_image_03.jpeg" alt="" class="room__img" /></picture>
+                <button class="resize-btn room__resize-btn">
+                    <svg class="icon">
+                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                    </svg>
+                </button>
+            </li>
+        </ul>
+        <div class="room__sticker">
+            <p class="room__desc">Просторная ванная для большой семьи</p>
+        </div>
+    </div>
+
+    <ul class="rooms-review__slider-points slider-points">
+        <li class="slider-points__point">
+            <button class="slider-points__btn slider-points__btn_active">Вся квартира</button>
+        </li>
+        <li class="slider-points__point">
+            <button class="slider-points__btn">Гостиная</button>
+        </li>
+        <li class="slider-points__point">
+            <button class="slider-points__btn">Ванная</button>
+        </li>
+        <!-- <li class="slider-points__point">
+            <button class="slider-points__btn">Кухня</button>
+        </li>
+        <li class="slider-points__point">
+            <button class="slider-points__btn">Спальня</button>
+        </li>
+        <li class="slider-points__point">
+            <button class="slider-points__btn">Детская</button>
+        </li>
+        <li class="slider-points__point">
+            <button class="slider-points__btn">Зал</button>
+        </li>
+        <li class="slider-points__point">
+            <button class="slider-points__btn">Санузел</button>
+        </li>
+        <li class="slider-points__point">
+            <button class="slider-points__btn">Лоджия</button>
+        </li> -->
+    </ul>
+</section>
+
+            <section class="video">
+    <div class="container">
+        <button
+            class="video__play-btn"
+            aria-label="Воспроизведение видео"
+            data-fancybox="video"
+            data-src="img/view-day.mp4"
+        >
+            <svg class="icon">
+                <use xlink:href="img/icons/sprite.svg#play_icon"></use>
+            </svg>
+        </button>
+        <div class="section-header video__section-header">
+            <h2 class="video__title">Идеальное место для комфортной жизни</h2>
+            <p class="video__text">Готовый дом с подземным паркингом и закрытой территорией</p>
+        </div>
+    </div>
+</section>
+ <section class="advantages">
+    <div class="advantages__header">
+        <div class="container advantages__container">
+            <div class="advantages__cload advantages__cload_left"></div>
+            <div class="advantages__cload advantages__cload_right"></div>
+            <h3 class="advantages__title">Дом комфорт класса</h3>
+            <img
+                src="img/house.png"
+                alt="Изображение ЖК"
+                class="advantages__main-image"
+                width="813"
+                height="831"
+            />
+            <div class="advantages__item advantages__item_structures advantage">
+                <div class="advantage__header">
+                    <picture><source srcset="img/structures.webp" type="image/webp"><img src="img/structures.png" alt="" width="126" height="126" /></picture>
+                </div>
+                <div class="advantage__body">
+                    <p class="advantage__text advantage__text_short">
+                        Современные фасадные конструкции
+                    </p>
+                </div>
+            </div>
+            <div class="advantages__item advantages__item_engineering advantage">
+                <div class="advantage__header">
+                    <picture><source srcset="img/engineering.webp" type="image/webp"><img src="img/engineering.png" alt="" width="126" height="126" /></picture>
+                </div>
+                <div class="advantage__body">
+                    <p class="advantage__text advantage__text_short">
+                        Качественные инженерные системы
+                    </p>
+                </div>
+            </div>
+            <div class="advantages__item advantages__item_windows advantage">
+                <div class="advantage__header">
+                    <picture><source srcset="img/windows.webp" type="image/webp"><img src="img/windows.png" alt="" width="126" height="126" /></picture>
+                </div>
+                <div class="advantage__body">
+                    <p class="advantage__text">Пластиковые окна с двухкамерным стеклопакетом</p>
+                </div>
+            </div>
+            <div class="advantages__eye-icon">
+                <svg class="icon open-icon">
+                    <use xlink:href="img/icons/sprite.svg#eye_icon"></use>
+                </svg>
+                <svg class="icon close-icon">
+                    <use xlink:href="img/icons/sprite.svg#close_icon"></use>
+                </svg>
+                <div class="advantages__eye-block">
+                    <picture><source srcset="img/eye/eye-image_01.webp" type="image/webp"><img src="img/eye/eye-image_01.png" alt="Фото" /></picture>
+                    <p>Лоджии в тепловом контуре</p>
+                </div>
+            </div>
+            <div class="advantages__eye-icon">
+                <svg class="icon open-icon">
+                    <use xlink:href="img/icons/sprite.svg#eye_icon"></use>
+                </svg>
+                <svg class="icon close-icon">
+                    <use xlink:href="img/icons/sprite.svg#close_icon"></use>
+                </svg>
+                <div class="advantages__eye-block">
+                    <picture><source srcset="img/eye/eye-image_01.webp" type="image/webp"><img src="img/eye/eye-image_01.png" alt="Фото" /></picture>
+                    <p>Лоджии в тепловом контуре</p>
+                </div>
+            </div>
+            <div class="advantages__eye-icon">
+                <svg class="icon open-icon">
+                    <use xlink:href="img/icons/sprite.svg#eye_icon"></use>
+                </svg>
+                <svg class="icon close-icon">
+                    <use xlink:href="img/icons/sprite.svg#close_icon"></use>
+                </svg>
+                <div class="advantages__eye-block">
+                    <picture><source srcset="img/eye/eye-image_01.webp" type="image/webp"><img src="img/eye/eye-image_01.png" alt="Фото" /></picture>
+                    <p>Лоджии в тепловом контуре</p>
+                </div>
+            </div>
+            <div class="advantages__eye-icon">
+                <svg class="icon open-icon">
+                    <use xlink:href="img/icons/sprite.svg#eye_icon"></use>
+                </svg>
+                <svg class="icon close-icon">
+                    <use xlink:href="img/icons/sprite.svg#close_icon"></use>
+                </svg>
+                <div class="advantages__eye-block">
+                    <picture><source srcset="img/eye/eye-image_01.webp" type="image/webp"><img src="img/eye/eye-image_01.png" alt="Фото" /></picture>
+                    <p>Лоджии в тепловом контуре</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section class="details">
+    <div class="container">
+        <div class="detail-card">
+            <div class="detail-card__header">
+                <img
+                    src="img/advantage_image_01.png"
+                    alt="Фото подземного паркинга"
+                    class="detail-card__image"
+                    height="245"
+                />
+            </div>
+            <div class="detail-card__body">
+                <p class="detail-card__text">Подземный паркинг на <span> 155 мест </span></p>
+            </div>
+        </div>
+        <div class="detail-card">
+            <div class="detail-card__header">
+                <img
+                    src="img/advantage_image_02.png"
+                    alt=""
+                    class="detail-card__image"
+                    height="245"
+                />
+            </div>
+            <div class="detail-card__body">
+                <p class="detail-card__text">Квартиры с видом на <span>город и реку</span></p>
+            </div>
+        </div>
+        <div class="detail-card">
+            <div class="detail-card__header">
+                <img
+                    src="img/advantage_image_03.png"
+                    alt=""
+                    class="detail-card__image"
+                    height="245"
+                />
+            </div>
+            <div class="detail-card__body">
+                <p class="detail-card__text">Магазины и аптеки <span>вблизи от дома</span></p>
+            </div>
+        </div>
+        <div class="detail-card">
+            <div class="detail-card__header">
+                <img
+                    src="img/advantage_image_04.png"
+                    alt=""
+                    class="detail-card__image"
+                    height="245"
+                />
+            </div>
+            <div class="detail-card__body">
+                <p class="detail-card__text">Удобная <span>транспортная развязка</span></p>
+            </div>
+        </div>
+        <div class="detail-card">
+            <div class="detail-card__header">
+                <img
+                    src="img/advantage_image_05.png"
+                    alt=""
+                    class="detail-card__image"
+                    height="245"
+                />
+            </div>
+            <div class="detail-card__body">
+                <p class="detail-card__text">Школа и детские сады <span>рядом с домом</span></p>
+            </div>
+        </div>
+        <div class="detail-card">
+            <div class="detail-card__header">
+                <img
+                    src="img/advantage_image_06.png"
+                    alt=""
+                    class="detail-card__image"
+                    height="245"
+                />
+            </div>
+            <div class="detail-card__body">
+                <p class="detail-card__text">Закрытая <span>охраняемая территория</span></p>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="land-design">
+    <div class="container">
+        <div class="land-design__content">
+            <p>Ландшафтный дизайн создает уютное пространство для отдыха и общения с природой</p>
+            <div class="sticker land-design__sticker">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#sun_icon"></use>
+                </svg>
+            </div>
+        </div>
+        <div class="land-design__image">
+            <picture>
+                <source
+                    srcset="img/land-design_xs.webp"
+                    type="image/webp"
+                    media="(max-width: 1000px)"
+                />
+                <source
+                    srcset="img/land-design_xs.png"
+                    type="image/png"
+                    media="(max-width: 1000px)"
+                />
+                <source
+                    srcset="img/land-design.webp"
+                    type="image/webp"
+                    media="(min-width: 1000px)"
+                />
+                <source
+                    srcset="img/land-design.png"
+                    type="image/png"
+                    media="(min-width: 1000px)"
+                />
+                <img src="img/land-design.png" alt="" />
+            </picture>
+            <!-- <picture><source srcset="img/land-design.webp" type="image/webp"><img src="img/land-design.png" alt="Фото ландшафтного дизайна" /></picture> -->
+        </div>
+        <h2 class="land-design__title">Ландшафтный уют</h2>
+        <p class="land-design__text">
+            С верхних этажей открываются широкие панорамы города реки Оки и парка «Швейцария».
+            Городская застройка и в перспективе не помешает наслаждаться видами
+        </p>
+        <a href="#" class="action-element land-design__action-element">
+            <span> Смотреть квартиры </span>
+        </a>
+    </div>
+</section>
+ <section class="request-section">
+    <div class="container">
+        <div class="request-section__col">
+            <div class="request-section__image"></div>
+        </div>
+        <div class="request-section__col">
+            <div class="request-section__content">
+                <div class="request-section__header">
+                    <h3 class="request-section__title">Ответим на все ваши вопросы</h3>
+                    <p class="request-section__text">
+                        Оставьте ваш номер телефона, а мы перезвоним и проконсультируем вас в
+                        ближайшее время
+                    </p>
+                </div>
+
+                <form action="#" class="request-form" id="request-form">
+                    <input type="text" class="request-form__input" placeholder="Имя" />
+                    <input type="tel" class="request-form__input" placeholder="+7 000-000-00-00" />
+                    <button class="action-element request-form__btn">
+                        <span>Оставить заявку</span>
+                    </button>
+                </form>
+                <p class="request-section__info-text">
+                    Нажимая на кнопку «Оставить заявку», я даю согласие на
+                    <a href="#" class="request-section__link">обработку персональных данных</a>
+                    и условия
+                    <a href="#" class="request-section__link">политики конфиденциальности</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="map-section">
+    <div class="map-section__inner">
+        <div class="map-section__map-cover">
+            <picture><source srcset="img/map.webp" type="image/webp"><img src="img/map.png" alt="" /></picture>
+        </div>
+        <div class="container map-section__container">
+            <div class="map-section__content map-content">
+                <h3 class="map-content__title">
+                    Благоустройство <span class="text-gradient">для каждого</span>
+                </h3>
+                <ul class="map-list map-content__list">
+                    <li class="map-list__item">
+                        <svg class="icon">
+                            <use xlink:href="img/icons/sprite.svg#icons_school"></use>
+                        </svg>
+                        <span class="map-list__item-title"> 4 школы </span>
+                    </li>
+                    <li class="map-list__item">
+                        <svg class="icon">
+                            <use xlink:href="img/icons/sprite.svg#icons_kidsgarden"></use>
+                        </svg>
+                        <span class="map-list__item-title"> 6 детских садов </span>
+                    </li>
+                    <li class="map-list__item">
+                        <svg class="icon">
+                            <use xlink:href="img/icons/sprite.svg#icons_shop"></use>
+                        </svg>
+                        <span class="map-list__item-title"> 5 супермаркетов </span>
+                    </li>
+                    <li class="map-list__item">
+                        <svg class="icon">
+                            <use xlink:href="img/icons/sprite.svg#icons_hospital"></use>
+                        </svg>
+                        <span class="map-list__item-title"> 2 больницы </span>
+                    </li>
+                    <li class="map-list__item">
+                        <svg class="icon">
+                            <use xlink:href="img/icons/sprite.svg#icons_sport"></use>
+                        </svg>
+                        <span class="map-list__item-title"> 2 спортзала </span>
+                    </li>
+                </ul>
+                <button class="map-content__btn">Смотреть в Яндекс Картах</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+            <section class="plans">
+    <div class="container">
+        <div class="plans__col">
+            <div class="plans__info">
+                <h2 class="plans__title">Удачные планировки</h2>
+                <p class="plans__text">
+                    Посмотрите все доступные варианты планировок трехкомнатных квартир на нашем
+                    сайте
+                </p>
+            </div>
+            <a href="#" class="action-element plans__action-element plans__action-element_dt"
+                ><span> Изучить планировку </span></a
+            >
+        </div>
+        <div class="plans__col">
+            <button class="slider-btn slider-btn_left plans-left" aria-label="Стрелка влево">
+                <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#arrow-down_icon"></use>
+                </svg>
+            </button>
+            <button class="slider-btn slider-btn_right plans-right" aria-label="Стрелка вправо">
+                <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#arrow-down_icon"></use>
+                </svg>
+            </button>
+            <div class="plans__content plans-swiper">
+                <ul class="plans-list swiper-wrapper">
+                    <li class="plans-list__item plan-card swiper-slide">
+                        <div class="plan-card__price">
+                            <div class="plan-card__info-group">
+                                <p class="plan-card__title">Стоимость, млн. ₽</p>
+                                <p class="plan-card__value">18,6</p>
+                            </div>
+                            <div class="plan-card__info-group">
+                                <p class="plan-card__title">Площадь</p>
+                                <p class="plan-card__value">91 м<sup>2</sup></p>
+                            </div>
+                        </div>
+                        <a href="#" class="plan-card__details-link text-gradient"> Подробнее </a>
+                        <div class="plan-card__details">
+                            <div class="plan-card__info-group">
+                                <p class="plan-card__title">Этаж</p>
+                                <p class="plan-card__value">18</p>
+                            </div>
+                            <div class="plan-card__info-group">
+                                <p class="plan-card__title">Номер квартиры</p>
+                                <p class="plan-card__value">202</p>
+                            </div>
+                        </div>
+                        <img
+                            src="img/slider/plans/plan_01.png"
+                            alt="План квартиры"
+                            class="plan-card__image"
+                            width="445"
+                            height="458"
+                        />
+                    </li>
+                    <li class="plans-list__item plan-card swiper-slide">
+                        <div class="plan-card__price">
+                            <div class="plan-card__info-group">
+                                <p class="plan-card__title">Стоимость, млн. ₽</p>
+                                <p class="plan-card__value">20,6</p>
+                            </div>
+                            <div class="plan-card__info-group">
+                                <p class="plan-card__title">Площадь</p>
+                                <p class="plan-card__value">91 м<sup>2</sup></p>
+                            </div>
+                        </div>
+                        <a href="#" class="plan-card__details-link text-gradient"> Подробнее </a>
+                        <div class="plan-card__details">
+                            <div class="plan-card__info-group">
+                                <p class="plan-card__title">Этаж</p>
+                                <p class="plan-card__value">18</p>
+                            </div>
+                            <div class="plan-card__info-group">
+                                <p class="plan-card__title">Номер квартиры</p>
+                                <p class="plan-card__value">202</p>
+                            </div>
+                        </div>
+                        <img
+                            src="img/slider/plans/plan_01.png"
+                            alt="План квартиры"
+                            class="plan-card__image"
+                            width="445"
+                            height="458"
+                        />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <a href="" class="action-element plans__action-element plans__action-element_mob"
+            ><span> Изучить планировку </span></a
+        >
+    </div>
+</section>
+ <section class="bank-offers">
+    <div class="container">
+        <div class="section-header bank-offers__header">
+            <h2 class="section-header__title bank-offers__title">
+                Выгодные предложения <span class="text-gradient">от ведущих банков</span>
+            </h2>
+            <div class="section-header__content bank-offers__content">
+                <p class="section-header__text bank-offers__text">
+                    Мы можем предложить индивидуальные условия ипотечного кредитования
+                </p>
+                <a href="#" class="action-element bank-offers__action-element">
+                    <span> Обсудить предложение </span>
+                </a>
+            </div>
+        </div>
+        <ul class="banks-list">
+            <li class="banks-list__item">
+                <img src="img/banks/sber_logo.svg" alt="Логотип сбербанк" />
+            </li>
+            <li class="banks-list__item">
+                <img src="img/banks/alfa_logo.svg" alt="Логотип сбербанк" />
+            </li>
+            <li class="banks-list__item">
+                <img src="img/banks/rosbank_logo.svg" alt="Логотип сбербанк" />
+            </li>
+            <li class="banks-list__item">
+                <img src="img/banks/vtb_logo.svg" alt="Логотип сбербанк" />
+            </li>
+            <li class="banks-list__item">
+                <img src="img/banks/dom_logo.svg" alt="Логотип сбербанк" />
+            </li>
+            <li class="banks-list__item">
+                <img src="img/banks/absolut_logo.svg" alt="Логотип сбербанк" />
+            </li>
+            <li class="banks-list__item">
+                <img src="img/banks/metalinvest_logo.svg" alt="Логотип сбербанк" />
+            </li>
+            <li class="banks-list__item">
+                <img src="img/banks/psb_logo.svg" alt="Логотип сбербанк" />
+            </li>
+        </ul>
+        <ul class="offer-cards">
+            <li class="offer-cards__item offer-card">
+                <div class="offer-card__header">
+                    <img
+                        src="img/offer_01.png"
+                        alt="Предложение банка"
+                        class="offer-card__image"
+                    />
+                </div>
+                <div class="offer-card__body">
+                    <p class="offer-card__text">Ставки по ипотеке от 6% годовых</p>
+                </div>
+            </li>
+            <li class="offer-cards__item offer-card">
+                <div class="offer-card__header">
+                    <img
+                        src="img/offer_02.png"
+                        alt="Предложение банка"
+                        class="offer-card__image"
+                    />
+                </div>
+                <div class="offer-card__body">
+                    <p class="offer-card__text">Первоначальный взнос от 20%</p>
+                </div>
+            </li>
+            <li class="offer-cards__item offer-card">
+                <div class="offer-card__header">
+                    <img
+                        src="img/offer_03.png"
+                        alt="Предложение банка"
+                        class="offer-card__image"
+                    />
+                </div>
+                <div class="offer-card__body">
+                    <p class="offer-card__text">Зачет вторичного жилья</p>
+                </div>
+            </li>
+            <li class="offer-cards__item offer-card">
+                <div class="offer-card__header">
+                    <img
+                        src="img/offer_04.png"
+                        alt="Предложение банка"
+                        class="offer-card__image"
+                    />
+                </div>
+                <div class="offer-card__body">
+                    <p class="offer-card__text">Можно использовать мат. капитал</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+            <section class="family-section">
+    <div class="family-section__decor"></div>
+    <div class="container">
+        <div class="family-section__col">
+            <div class="family-section__image"></div>
+        </div>
+        <div class="family-section__col">
+            <div class="family-section__content">
+                <div class="family-section__header">
+                    <span class="family-section__title family-section__title_variant">
+                        174
+                        <span class="family-section__sticker">
+                            <svg>
+                                <use xlink:href="img/icons/sprite.svg#heart_icon"></use>
+                            </svg>
+                        </span>
+                    </span>
+                    <span class="family-section__title">семьи</span>
+                </div>
+
+                <p class="family-section__text">уже приобрели квартиру в ЖК «Швейцария Парк»</p>
+                <a href="#" class="action-element family-section__action-element">
+                    <span> Посмотреть квартиры </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="house-details-section">
+    <div class="container">
+        <h2 class="house-details-section__title">Посмотрите на ваш дом в деталях</h2>
+        <div class="house-details-section__slider">
+            <button
+                class="slider-btn slider-btn_left house-slider__control house-slider__control_left"
+                aria-label="Стрелка влево"
+            >
+                <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#arrow-down_icon"></use>
+                </svg>
+            </button>
+            <button
+                class="slider-btn slider-btn_right house-slider__control house-slider__control_right"
+                aria-label="Стрелка вправо"
+            >
+                <svg class="icon">
+                    <use xlink:href="img/icons/sprite.svg#arrow-down_icon"></use>
+                </svg>
+            </button>
+            <div class="house-swiper">
+                <ul class="house-slider swiper-wrapper">
+                    <li
+                        class="house-slider__item house-slider__item_f swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_01.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_01.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li
+                        class="house-slider__item house-slider__item_s swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_02.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_02.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li
+                        class="house-slider__item house-slider__item_th swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_03.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_03.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li
+                        class="house-slider__item house-slider__item_f swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_01.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_01.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li
+                        class="house-slider__item house-slider__item_s swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_02.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_02.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li
+                        class="house-slider__item house-slider__item_th swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_03.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_03.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li
+                        class="house-slider__item house-slider__item_f swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_01.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_01.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+                    <li
+                        class="house-slider__item house-slider__item_s swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_02.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_02.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+
+                    <li
+                        class="house-slider__item house-slider__item_th swiper-slide"
+                        data-fancybox="house"
+                        data-src="img/slider/house/house-slide_03.jpeg"
+                    >
+                        <img
+                            src="img/slider/house/house-slide_03.jpeg"
+                            alt=""
+                            class="house-slider__slide-image"
+                        />
+                        <button class="resize-btn house-slider__resize-btn">
+                            <svg class="icon">
+                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+                <div class="bullets"></div>
+            </div>
+        </div>
+    </div>
+</section>
+ <section class="final-section">
+    <div class="container">
+        <div class="final-section__content">
+            <p class="final-section__subtitle">Она уже ждет вас</p>
+            <h2 class="final-section__title">
+                Ваша трехкомнатная квартира мечты в ЖК «Швейцария Парк»
+            </h2>
+            <a href="#" class="action-element final-section__action-elemet">
+                <span> Выбрать квартиру </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+        </main>
+        <footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <a href="#" class="logo-link footer__logo-link">
+                <img
+                    src="img/logo.svg"
+                    alt="logo"
+                    class="logo-link__image"
+                    width="403"
+                    height="155"
+                />
+            </a>
+            <div class="footer__contacts department">
+                <p class="text-gradient department__title">Отдел продаж:</p>
+                <div class="department__col">
+                    <p class="department__subtitle">Адрес</p>
+                    <p class="department__text">
+                        г.Нижний Новгород, ул.Максима Горького, <span>д.262,офис 48</span>
+                    </p>
+                </div>
+                <div class="department__col">
+                    <p class="department__subtitle">Телефон</p>
+                    <div class="department__phones">
+                        <a href="tel:+70000000000" class="department__text link"> 224 88 72 </a>
+                        <a href="tel:+70000000000" class="department__text link">
+                            8 927 725 27 33
+                        </a>
+                    </div>
+                </div>
+                <div class="department__col">
+                    <p class="department__subtitle">Почта</p>
+                    <a href="mailto:bereg52sales@yandex.ru" class="department__text link">
+                        bereg52sales@yandex.ru
+                    </a>
+                </div>
+            </div>
+            <ul class="footer-menu">
+                <li class="footer-menu__item">
+                    <a href="#" class="link footer-menu__link"> О застройщике </a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="link footer-menu__link"> Контакты </a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="link footer-menu__link"> Документы </a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="link footer-menu__link"> Ход строительства </a>
+                </li>
+                <li class="footer-menu__item">
+                    <a href="#" class="link footer-menu__link"> Новости </a>
+                </li>
+            </ul>
+            <div class="footer__questions questions">
+                <p class="questions__title text-gradient">Остались вопросы?</p>
+                <p class="questions__subtitle">Оставьте заявку и мы перезвоним!</p>
+                <form action="" class="questions-form footer__form">
+                    <input type="text" class="questions-form__input" placeholder="Имя" />
+                    <div class="questions-form__input-wrapper">
+                        <input
+                            type="tel"
+                            class="questions-form__input"
+                            placeholder="+7 000-000-00-00"
+                        />
+                        <div class="questions-form__placeholder" style="display: block">
+                            <span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00
+                        </div>
+                    </div>
+                    <button class="questions-form__btn" type="submit">оставить заявку</button>
+                    <p class="questions-form__text">
+                        Нажимая на кнопку «Оставить заявку», я даю согласие на
+                        <a href="#">обработку персональных данных</a> и условия
+                        <a href="#">политики конфиденциальности</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__group">
+                <p class="footer__text footer__copy">© Швейцария парк 2023</p>
+                <a href="#" class="footer__text footer__policy"> Политика конфиденциальности </a>
+                <a href="#" class="footer__text footer__personal">
+                    Обработка персональных данных
+                </a>
+            </div>
+            <p class="footer__text footer__info-text">
+                Изображения, размещённые на данном сайте, носят исключительно информационный
+                характер
+            </p>
+            <div class="created">
+                <p class="created__text">Разработано в</p>
+                <a href="#" class="created__link">
+                    <img
+                        src="img/omni_logo.svg"
+                        alt="Логотип OMNI"
+                        class="create__logo"
+                        width="63"
+                        height="27"
+                    />
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </body>
+</html>

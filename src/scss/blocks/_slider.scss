@@ -1,0 +1,42 @@
+@use 'vars' as *;
+
+.plans-swiper {
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1500px;
+    @include tablet {
+        max-width: 932px;
+    }
+    @media screen and (max-width: 1025px) {
+        max-width: 700px;
+    }
+    @include mobile {
+        max-width: 335px;
+        overflow: hidden;
+    }
+    @media screen and (max-width: 374px) {
+        max-width: 250px;
+    }
+}
+.swiper-pagination-bullets-dynamic {
+    bottom: 0 !important;
+    position: relative;
+    display: none;
+    @include mobile {
+        display: block;
+    }
+}
+.swiper-pagination-bullet-active {
+    // background-color: red !important;
+    width: 8px !important;
+    height: 8px !important;
+}
+.swiper-pagination-bullet-active-prev,
+.swiper-pagination-bullet-active-next {
+    opacity: 1 !important;
+}
+.swiper-pagination-bullet {
+    background-color: #abdbf2 !important;
+    opacity: 1 !important;
+}

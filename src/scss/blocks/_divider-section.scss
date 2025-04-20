@@ -1,0 +1,93 @@
+@use 'vars' as *;
+
+.divider {
+    padding-top: 149px;
+    padding-bottom: 187px;
+    background-color: #fcfeff;
+    @include laptop {
+        padding-top: 112px;
+        padding-bottom: 142px;
+    }
+    @include xl-tablet {
+        padding-top: 63px;
+        padding-bottom: 63px;
+    }
+    &__subtitle {
+        text-align: center;
+        margin-bottom: 43px;
+        @include laptop {
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+
+        @include tablet {
+            font-size: 18px;
+            margin-bottom: 32px;
+        }
+        @include xl-tablet {
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+    }
+    &__title {
+        color: #436870;
+        font-weight: 700;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 6px;
+        font-size: 64px;
+        line-height: 74px;
+        @include laptop {
+            font-size: 48px;
+            line-height: 55px;
+            row-gap: 5px;
+        }
+
+        @include xl-tablet {
+            font-size: 24px;
+            line-height: 28px;
+        }
+        @include mobile {
+            display: inline-block;
+            text-align: center;
+            text-wrap: balance;
+        }
+
+        & > span {
+            display: flex;
+            align-items: center;
+            column-gap: 8px;
+            @include mobile {
+                display: inline;
+            }
+        }
+    }
+    &__house-icon {
+        color: #47b596;
+        width: 48px;
+        height: 48px;
+        @include xl-tablet {
+            width: 21px;
+            height: 21px;
+        }
+        @include mobile {
+            margin-bottom: 4px;
+            vertical-align: bottom;
+        }
+    }
+    &__flower-icon {
+        color: #8dc9e4;
+        width: 48px;
+        height: 48px;
+        @include xl-tablet {
+            width: 21px;
+            height: 21px;
+        }
+        @include mobile {
+            margin-bottom: 4px;
+            vertical-align: bottom;
+        }
+    }
+}

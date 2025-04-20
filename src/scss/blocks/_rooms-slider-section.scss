@@ -1,0 +1,220 @@
+@use 'vars' as *;
+@use './slider';
+.rooms-review {
+    padding-top: 106px;
+    padding-bottom: 225px;
+    background-color: #fcfeff;
+    overflow: hidden;
+    @include laptop {
+        padding-top: 80px;
+        padding-bottom: 167px;
+    }
+    @include tablet {
+        padding-top: 56px;
+        padding-bottom: 96px;
+    }
+    &__header {
+        margin-bottom: 72px;
+        @include laptop {
+            margin-bottom: 54px;
+        }
+        @include tablet {
+            margin-bottom: 56px;
+        }
+    }
+    &__title {
+        text-wrap: balance;
+    }
+    &__action-element {
+        font-size: 24px;
+        padding: 26px 93px;
+        @include laptop {
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-inline: 30px;
+            font-size: 20px;
+        }
+        @include mobile {
+            font-size: 14px;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            width: 100%;
+            max-width: none;
+            justify-content: center;
+        }
+    }
+}
+.rooms-list {
+    display: flex;
+
+    align-items: center;
+    overflow: visible;
+    margin-bottom: 42px;
+    @include laptop {
+        margin-bottom: 32px;
+    }
+
+    &__item {
+        height: 800px;
+        width: 1066px;
+        flex-shrink: 0;
+        flex-grow: 0;
+        border-radius: 24px;
+        overflow: visible;
+        @include laptop {
+            width: 800px;
+            height: 600px;
+        }
+        @include tablet {
+            width: 600px;
+            height: 400px;
+        }
+        @include mobile {
+            width: 335px;
+            height: 252px;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+        }
+    }
+    &.swiper-wrapper {
+        margin-left: -15%;
+        @include tablet {
+            margin-left: -30%;
+        }
+    }
+}
+.room {
+    position: relative;
+
+    &__sticker {
+        position: absolute;
+        background-color: #d5effa;
+        border-radius: 16px;
+        padding: 32px;
+        left: 166px;
+        bottom: -18px;
+        max-width: 310px;
+        @include laptop {
+            padding: 24px;
+            max-width: 232px;
+            bottom: -14px;
+        }
+        @include tablet {
+            padding: 16px;
+        }
+        @include mobile {
+            position: relative;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            max-width: 195px;
+        }
+    }
+    &__resize-btn {
+        display: none;
+        position: absolute;
+        bottom: 16px;
+        right: 16px;
+        transition: $transition;
+        &:hover {
+            background-color: rgba(171, 219, 242, 1);
+            svg {
+                color: $white;
+            }
+        }
+        svg {
+            color: #436870;
+            transition: $transition;
+        }
+        @include mobile {
+            display: flex;
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+        }
+    }
+    &__desc {
+        color: #516f75;
+        text-wrap: balance;
+        text-align: center;
+        @include laptop {
+            font-size: 18px;
+        }
+        @include tablet {
+            font-size: 16px;
+        }
+    }
+    &__img {
+        object-fit: cover;
+    }
+    &.swiper-slide {
+        width: 1066px;
+        @include laptop {
+            width: 800px;
+        }
+        @include tablet {
+            width: 335px;
+        }
+    }
+}
+.slider-points {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: scroll;
+
+    column-gap: 10px;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+    @include mobile {
+        column-gap: 8px;
+        justify-content: normal;
+    }
+    &__point {
+        backdrop-filter: blur(24.13333511352539px);
+
+        overflow: hidden;
+        border-radius: 27px;
+        max-width: max-content;
+        flex-shrink: 0;
+    }
+    &__btn {
+        padding-top: 13px;
+        padding-bottom: 13px;
+        padding-inline: 32px;
+        color: #516f75;
+        font-size: 22px;
+        font-weight: 700;
+        border: 1px solid rgba(81, 111, 117, 1);
+        border-radius: 27px;
+        &_active {
+            background-color: rgba(219, 243, 253, 1);
+            border: 1px solid rgba(219, 243, 253, 1);
+        }
+        @include laptop {
+            font-size: 18px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-inline: 24px;
+        }
+        @include tablet {
+            font-size: 14px;
+            padding-inline: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+    }
+}
+.slider-wrapper {
+    display: none;
+    position: relative;
+    &_active {
+        display: block;
+    }
+}
