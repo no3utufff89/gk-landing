@@ -1,4 +1,4 @@
-import { Navigation } from 'swiper/modules';
+import { Navigation, Pagination } from 'swiper/modules';
 
 export const SLIDER_SETTINGS = {
     roomSlider: {
@@ -30,7 +30,7 @@ export const SLIDER_SETTINGS = {
         },
     },
     plansSlider: {
-        modules: [Navigation],
+        modules: [Navigation, Pagination],
         observer: true,
         observeParents: true,
         speed: 800,
@@ -53,9 +53,14 @@ export const SLIDER_SETTINGS = {
                 spaceBetween: 10,
             },
         },
+        pagination: {
+            el: '.bullets',
+            dynamicBullets: 5,
+            clickable: true,
+        },
     },
     houseSlider: {
-        modules: [Navigation],
+        modules: [Navigation, Pagination],
         loop: true,
         loopedSlidesLimit: null,
         slidesPerView: 'auto',

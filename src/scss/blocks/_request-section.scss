@@ -49,6 +49,15 @@
             font-size: 32px;
             line-height: 37px;
         }
+        @include tablet {
+            font-size: 24px;
+            line-height: 100%;
+        }
+        span {
+            @include mobile {
+                display: block;
+            }
+        }
     }
     &__text {
         color: #516f75;
@@ -58,6 +67,10 @@
             font-size: 20px;
             line-height: 23px;
             max-width: 350px;
+        }
+        @include mobile {
+            font-size: 16px;
+            line-height: 100%;
         }
     }
 
@@ -95,10 +108,8 @@
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: image-set(
-            url(../img/meeting_image.jpeg) type('image/jpeg') 1x,
-            url(../img/meeting_image.webp) type('image/webp') 1x
-        );
+        background-image: url(../img/meeting_image.jpeg);
+
         @include laptop {
             border-radius: 70px 20px 70px 20px;
         }
@@ -107,10 +118,7 @@
             border-radius: 50px;
         }
         @include mobile {
-            background-image: image-set(
-                url(../img/meeting_image_xs.jpeg) type('image/jpeg') 1x,
-                url(../img/meeting_image_xs.webp) type('image/webp') 1x
-            );
+            background-image: url(../img/meeting_image_xs.jpeg);
             height: 375px;
         }
     }
