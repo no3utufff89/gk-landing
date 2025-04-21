@@ -4445,6 +4445,7 @@ html.with-fancybox body.hide-scrollbar {
   -ms-grid-column-align: end;
       justify-self: end;
   row-gap: 21px;
+  height: auto;
 }
 
 .bank-offers__action-element {
