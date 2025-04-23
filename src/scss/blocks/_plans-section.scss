@@ -328,6 +328,7 @@
         z-index: 1;
         margin-top: -57px;
         margin-bottom: -57px;
+        margin-right: 100px;
         z-index: 0;
         @include laptop {
             width: 378px;
@@ -336,6 +337,7 @@
             margin-bottom: -39px;
             margin-left: 100px;
             grid-column: 1/4;
+            margin-right: 30px;
         }
         @include mobile {
             width: 161px;
@@ -345,6 +347,7 @@
             margin-left: 0;
             grid-column: 1/4;
             z-index: 0;
+            margin-right: 0;
         }
         @media (max-width: 374px) {
             grid-column: 1/2;

@@ -225,7 +225,7 @@
     & ~ .slider-points__point-active {
         opacity: 0;
     }
-    @include mobile {
+    @include tablet {
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -240,6 +240,7 @@
         display: block;
         &__desc {
             font-size: 16px;
+            text-align: center;
         }
     }
 }
@@ -300,6 +301,10 @@
     column-gap: 10px;
     max-width: max-content;
     margin: 0 auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
     @include laptop {
         column-gap: 8px;
     }
@@ -309,5 +314,9 @@
         width: 100%;
         overflow-x: scroll;
         overflow-y: visible;
+        scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        overflow-x: auto;
     }
 }
