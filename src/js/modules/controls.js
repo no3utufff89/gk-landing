@@ -2,6 +2,7 @@ import { createFancy } from './funcyModals.js';
 import { Swiper } from 'swiper';
 import { Navigation } from 'swiper/modules';
 import { SLIDER_SETTINGS } from './settings.js';
+import ElementDto from './functions.js';
 //eyes control
 export function eyeControls(elements) {
     elements.eyeBtn.forEach((eye, index) => {
@@ -37,21 +38,21 @@ export function videoControl(elements) {
     elements.videoPlayBtn.addEventListener('click', createFancy);
 }
 
-export function tabsControl(elements) {
-    elements.allTabBtns.forEach((elem, index) => {
-        elem.addEventListener('click', () => {
-            for (let i = 0; i < elements.allTabBlocks.length; i += 1) {
-                if (index === i) {
-                    elements.allTabBlocks[i].classList.add('slider-wrapper_active');
-                    elements.allTabBtns[i].classList.add('slider-points__btn_active');
-                } else {
-                    elements.allTabBlocks[i].classList.remove('slider-wrapper_active');
-                    elements.allTabBtns[i].classList.remove('slider-points__btn_active');
-                }
-            }
-        });
-    });
-}
+// export function tabsControl(elements) {
+//     elements.allTabBtns.forEach((elem, index) => {
+//         elem.addEventListener('click', () => {
+//             for (let i = 0; i < elements.allTabBlocks.length; i += 1) {
+//                 if (index === i) {
+//                     elements.allTabBlocks[i].classList.add('slider-wrapper_active');
+//                     elements.allTabBtns[i].classList.add('slider-points__btn_active');
+//                 } else {
+//                     elements.allTabBlocks[i].classList.remove('slider-wrapper_active');
+//                     elements.allTabBtns[i].classList.remove('slider-points__btn_active');
+//                 }
+//             }
+//         });
+//     });
+// }
 export function windowResizeControl() {
     window.addEventListener('resize', () => {
         if (window.innerWidth === 1000) {
@@ -59,3 +60,24 @@ export function windowResizeControl() {
         }
     });
 }
+export const scrollYControl = elem => {
+    return window.innerWidth;
+};
+
+// export function tabContol(elements) {
+//     const allElements = elements.roomControls;
+//     const activeElementWrapper = allElements.find(el => el.classList.contains('active-control'));
+//     const activeSticker = activeElementWrapper.querySelector('.control-element__block');
+//     const activeBtn = activeElementWrapper.querySelector('.slider-points__btn');
+//     const activeStickerWidth = activeSticker.offsetWidth;
+//     const activeStickerHeight = activeSticker.offsetHeight;
+//     const activeBtnWidth = activeBtn.offsetWidth;
+//     const activeBtnHeight = activeBtn.offsetHeight;
+//     const leftOffset = (activeStickerWidth - activeBtnWidth) / 2;
+//     const topOffset = activeStickerHeight + activeBtnHeight + 24;
+//     activeSticker.style.cssText = `
+//     position: absolute;
+//    left: -${leftOffset}px;
+//    top: -${topOffset}px;
+//    `;
+// }

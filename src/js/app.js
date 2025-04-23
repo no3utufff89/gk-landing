@@ -5,14 +5,14 @@ import {
     burgerControls,
     eyeControls,
     resizeControl,
-    tabsControl,
+    scrollYControl,
     videoControl,
     windowResizeControl,
 } from './modules/controls.js';
 import * as flsFunctions from './modules/functions.js';
 import { pageElements } from './modules/pageElements.js';
 import { SLIDER_SETTINGS } from './modules/settings.js';
-import { createHouseSlider, createPlansSlider, createRoomsSlider } from './modules/sliders.js';
+import { createHouseSlider, createPlansSlider, roomsSlider } from './modules/sliders.js';
 flsFunctions.isWebp();
 
 const elements = pageElements();
@@ -21,13 +21,13 @@ eyeControls(elements);
 burgerControls(elements);
 resizeControl(elements);
 videoControl(elements);
-tabsControl(elements);
 //sliders
-new Swiper('.rooms-slider-wrapper', SLIDER_SETTINGS.roomSlider);
+// new Swiper('.rooms-slider-wrapper', SLIDER_SETTINGS.roomSlider);
 new Swiper('.plans-swiper', SLIDER_SETTINGS.plansSlider);
 createHouseSlider('.house-swiper');
 windowResizeControl();
-
+roomsSlider();
+scrollYControl();
 const inp = document.querySelectorAll('input[type=tel]');
 if (inp) {
     inp.forEach(item => {

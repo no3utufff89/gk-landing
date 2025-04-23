@@ -2,7 +2,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 export const SLIDER_SETTINGS = {
     roomSlider: {
-        modules: [Navigation],
+        modules: [Navigation, Pagination],
         observer: true,
         observeParents: true,
         speed: 800,
@@ -38,6 +38,7 @@ export const SLIDER_SETTINGS = {
         slidesPerView: 1,
         preventClicks: true,
         spaceBetween: 20,
+        initialSlide: 3,
         navigation: {
             nextEl: '.plans-right',
             prevEl: '.plans-left',
@@ -55,7 +56,8 @@ export const SLIDER_SETTINGS = {
         },
         pagination: {
             el: '.bullets',
-            dynamicBullets: 5,
+            dynamicBullets: true,
+            dynamicMainBullets: 1,
             clickable: true,
         },
     },

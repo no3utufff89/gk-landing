@@ -94,23 +94,23 @@
         background-color: #d5effa;
         border-radius: 16px;
         padding: 32px;
-        left: 166px;
-        bottom: -18px;
-        max-width: 310px;
+        left: -25%;
+        right: -25%;
+        bottom: 90px;
+        min-width: 310px;
+        transition: $transition;
+        opacity: 0;
+        cursor: auto;
+        pointer-events: none;
         @include laptop {
             padding: 24px;
             max-width: 232px;
             bottom: -14px;
+            min-width: 232px;
         }
         @include tablet {
             padding: 16px;
-        }
-        @include mobile {
-            position: relative;
-            bottom: 15px;
-            left: 50%;
-            transform: translateX(-50%);
-            max-width: 195px;
+            display: none;
         }
     }
     &__resize-btn {
@@ -160,61 +160,154 @@
         }
     }
 }
-.slider-points {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    overflow: scroll;
+// .slider-points {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding-left: 20px;
+//     padding-right: 20px;
 
-    column-gap: 10px;
-    &::-webkit-scrollbar {
-        width: 0;
-    }
-    @include mobile {
-        column-gap: 8px;
-        justify-content: normal;
-    }
-    &__point {
-        backdrop-filter: blur(24.13333511352539px);
+//     column-gap: 10px;
+//     &::-webkit-scrollbar {
+//         width: 0;
+//     }
+//     @include mobile {
+//         column-gap: 8px;
+//         justify-content: normal;
+//     }
+//     &__point {
+//         backdrop-filter: blur(24.13333511352539px);
+//         width: 10px;
+//         height: 10px;
+//         border-radius: 27px;
 
-        overflow: hidden;
-        border-radius: 27px;
-        max-width: max-content;
-        flex-shrink: 0;
-    }
-    &__btn {
-        padding-top: 13px;
-        padding-bottom: 13px;
-        padding-inline: 32px;
-        color: #516f75;
-        font-size: 22px;
-        font-weight: 700;
-        border: 1px solid rgba(81, 111, 117, 1);
-        border-radius: 27px;
-        &_active {
-            background-color: rgba(219, 243, 253, 1);
-            border: 1px solid rgba(219, 243, 253, 1);
-        }
-        @include laptop {
-            font-size: 18px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            padding-inline: 24px;
-        }
-        @include tablet {
-            font-size: 14px;
-            padding-inline: 16px;
-            padding-top: 8px;
-            padding-bottom: 8px;
-        }
-    }
-}
+//         flex-shrink: 0;
+//     }
+//     &__btn {
+//         padding-top: 13px;
+//         padding-bottom: 13px;
+//         padding-inline: 32px;
+//         color: #516f75;
+//         font-size: 22px;
+//         font-weight: 700;
+//         border: 1px solid rgba(81, 111, 117, 1);
+//         border-radius: 27px;
+//         &_active {
+//             background-color: rgba(219, 243, 253, 1);
+//             border: 1px solid rgba(219, 243, 253, 1);
+//         }
+//         @include laptop {
+//             font-size: 18px;
+//             padding-top: 10px;
+//             padding-bottom: 10px;
+//             padding-inline: 24px;
+//         }
+//         @include tablet {
+//             font-size: 14px;
+//             padding-inline: 16px;
+//             padding-top: 8px;
+//             padding-bottom: 8px;
+//         }
+//     }
+// }
 .slider-wrapper {
     display: none;
     position: relative;
     &_active {
         display: block;
+    }
+}
+.rooms-swiper-outer {
+    position: relative;
+}
+.mobile-sticker {
+    display: none;
+    & ~ .slider-points__point-active {
+        opacity: 0;
+    }
+    @include mobile {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 47px;
+        background-color: #d5effa;
+        border-radius: 16px;
+        padding: 16px;
+        max-width: max-content;
+        min-width: 195px;
+        transition: $transition;
+        opacity: 1;
+        display: block;
+        &__desc {
+            font-size: 16px;
+        }
+    }
+}
+.rooms-swiper-outer > .swiper-wrapper {
+    display: flex;
+    margin-bottom: 42px;
+    @include mobile {
+        margin-bottom: 100px;
+    }
+}
+.rooms-swiper-inner > .swiper-wrapper {
+    display: flex;
+    margin-left: -15%;
+}
+.outer-slide,
+.inner-slide {
+    flex-shrink: 0;
+    overflow: hidden;
+}
+.active-bullet-main {
+    background-color: rgba(219, 243, 253, 1);
+    border: 1px solid transparent;
+    button {
+        border: 1px solid transparent;
+    }
+}
+.slider-points__point {
+    background-color: transparent;
+    padding: 13.5px 32px;
+
+    flex-shrink: 0;
+    border-radius: 27px;
+    border: 1px solid rgba(81, 111, 117, 1);
+    font-size: 22px;
+    color: rgba(81, 111, 117, 1);
+    transition: $transition;
+    position: relative;
+    cursor: pointer;
+    @include laptop {
+        font-size: 18px;
+        padding: 10px 24px;
+        border-radius: 20px;
+    }
+    @include tablet {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    &-active {
+        background-color: rgba(219, 243, 253, 1);
+        border: 1px solid transparent;
+        div {
+            opacity: 1;
+        }
+    }
+}
+.slider-points {
+    display: flex;
+    column-gap: 10px;
+    max-width: max-content;
+    margin: 0 auto;
+    @include laptop {
+        column-gap: 8px;
+    }
+    @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+        width: 100%;
+        overflow-x: scroll;
+        overflow-y: visible;
     }
 }
