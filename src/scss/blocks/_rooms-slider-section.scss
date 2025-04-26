@@ -2,12 +2,12 @@
 @use './slider';
 .rooms-review {
     padding-top: 106px;
-    padding-bottom: 225px;
+    padding-bottom: 115px;
     background-color: #fcfeff;
     overflow: hidden;
     @include laptop {
         padding-top: 80px;
-        padding-bottom: 167px;
+        padding-bottom: 56px;
     }
     @include tablet {
         padding-top: 56px;
@@ -246,9 +246,9 @@
 }
 .rooms-swiper-outer > .swiper-wrapper {
     display: flex;
-    margin-bottom: 42px;
-    @include mobile {
-        margin-bottom: 100px;
+    margin-bottom: 36px;
+    @include laptop {
+        margin-bottom: 24px;
     }
 }
 .rooms-swiper-inner > .swiper-wrapper {
@@ -318,5 +318,74 @@
         -webkit-overflow-scrolling: touch;
         white-space: nowrap;
         overflow-x: auto;
+    }
+}
+.rooms-pagination {
+    &__list {
+        display: flex;
+        justify-content: center;
+        column-gap: 10px;
+        margin-bottom: 40px;
+        @include laptop {
+            justify-content: center;
+            column-gap: 8px;
+            margin-bottom: 34px;
+        }
+        @include tablet {
+            justify-content: unset;
+            column-gap: 0;
+            margin-bottom: 24px;
+            // justify-content: space-between;
+            // overflow: auto;
+            // -webkit-overflow-scrolling: touch;
+        }
+    }
+    &__item {
+        padding: 13px 32px;
+        border-radius: 27px;
+        border: 1px solid rgba(81, 111, 117, 1);
+        flex-grow: 0;
+        flex-shrink: 0;
+        cursor: pointer;
+        transition: $transition;
+        @include laptop {
+            padding: 10px 24px;
+        }
+        @include tablet {
+            padding: 8px 16px;
+        }
+        &-active {
+            background-color: rgba(219, 243, 253, 1);
+            border: 1px solid transparent;
+            transition: $transition;
+        }
+    }
+    &__item-text {
+        font-weight: 700;
+        font-size: 22px;
+        text-align: center;
+        @include laptop {
+            font-size: 18px;
+        }
+        @include tablet {
+            font-size: 14px;
+        }
+    }
+}
+.current-room-info {
+    &__text {
+        font-weight: 700;
+        font-size: 48px;
+        text-wrap: balance;
+        max-width: 45%;
+        @include laptop {
+            font-size: 36px;
+        }
+        @include tablet {
+            font-size: 24px;
+        }
+        @include mobile {
+            max-width: none;
+        }
     }
 }

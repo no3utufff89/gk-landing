@@ -2,7 +2,7 @@ import { Navigation, Pagination } from 'swiper/modules';
 
 export const SLIDER_SETTINGS = {
     roomSlider: {
-        modules: [Navigation],
+        modules: [Navigation, Pagination],
         observer: true,
         observeParents: true,
         speed: 800,
@@ -11,6 +11,7 @@ export const SLIDER_SETTINGS = {
         initialSlide: 2,
         centeredSlides: false,
         spaceBetween: 21,
+
         breakpoints: {
             1440: {
                 spaceBetween: 21,
@@ -38,6 +39,8 @@ export const SLIDER_SETTINGS = {
         slidesPerView: 1,
         preventClicks: true,
         spaceBetween: 20,
+        initialSlide: 2,
+        rewind: true,
         navigation: {
             nextEl: '.plans-right',
             prevEl: '.plans-left',
@@ -54,32 +57,41 @@ export const SLIDER_SETTINGS = {
             },
         },
         pagination: {
-            el: '.bullets',
-            dynamicBullets: 5,
+            el: '.plans-pagination',
+            dynamicBullets: true,
+            dynamicMainBullets: 1,
             clickable: true,
+            bulletClass: 'plans-pagination__bullet',
+            modifierClass: 'plans-pagination__',
+            bulletActiveClass: 'plans-pagination__bullet_main',
         },
     },
     houseSlider: {
-        modules: [Navigation, Pagination],
+        modules: [Pagination, Navigation],
         loop: true,
-        loopedSlidesLimit: null,
-        slidesPerView: 'auto',
         spaceBetween: 40,
+        preventClicks: true,
         speed: 800,
-        virtual: {
-            addSlidesAfter: 4,
-        },
-        breakpoints: {
-            1400: {
-                spaceBetween: 40,
-            },
-            320: {
-                spaceBetween: 20,
-            },
-        },
+        initialSlide: 3,
+        slidesPerView: 'auto',
+        slidesPerGroup: 3,
         navigation: {
             nextEl: '.house-slider__control_right',
             prevEl: '.house-slider__control_left',
+        },
+        breakpoints: {
+            300: {
+                slidesPerGroup: 1,
+            },
+        },
+        pagination: {
+            el: '.house-pagination',
+            dynamicBullets: true,
+            dynamicMainBullets: 2,
+            clickable: true,
+            bulletClass: 'house-pagination__bullet',
+            modifierClass: 'house-pagination__',
+            bulletActiveClass: 'house-pagination__bullet_main',
         },
     },
 };

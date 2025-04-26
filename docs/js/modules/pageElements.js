@@ -9,6 +9,7 @@ export const pageElements = () => {
     const videoPlayBtn = document.querySelector('.video__play-btn');
     const resizeBtn = [...document.querySelectorAll('.room__resize-btn')];
     const houseResizeBtn = [...document.querySelectorAll('.house-slider__resize-btn')];
+    const roomControls = [...document.querySelectorAll('.control-element')];
     return {
         burgerBtn,
         eyeBtn,
@@ -20,5 +21,6 @@ export const pageElements = () => {
         videoPlayBtn,
         resizeBtn,
         houseResizeBtn,
+        roomControls,
     };
 };

@@ -1,33 +1,31 @@
-'use strict';
 import { Swiper } from 'swiper';
-
 import {
     burgerControls,
     eyeControls,
     resizeControl,
-    tabsControl,
+    scrollYControl,
     videoControl,
-    windowResizeControl,
 } from './modules/controls.js';
 import * as flsFunctions from './modules/functions.js';
 import { pageElements } from './modules/pageElements.js';
 import { SLIDER_SETTINGS } from './modules/settings.js';
-import { createHouseSlider, createPlansSlider, createRoomsSlider } from './modules/sliders.js';
+import { roomsSlider } from './modules/sliders.js';
+
 flsFunctions.isWebp();
 
 const elements = pageElements();
+// createHouseSlider('.house-swiper');
 
 eyeControls(elements);
 burgerControls(elements);
 resizeControl(elements);
 videoControl(elements);
-tabsControl(elements);
 //sliders
-new Swiper('.rooms-slider-wrapper', SLIDER_SETTINGS.roomSlider);
 new Swiper('.plans-swiper', SLIDER_SETTINGS.plansSlider);
-createHouseSlider('.house-swiper');
-windowResizeControl();
+new Swiper('.house-swiper', SLIDER_SETTINGS.houseSlider);
 
+roomsSlider();
+scrollYControl();
 const inp = document.querySelectorAll('input[type=tel]');
 if (inp) {
     inp.forEach(item => {
@@ -41,3 +39,29 @@ if (inp) {
         Inputmask({ mask: '+7 999 999-99-99' }).mask(item);
     });
 }
+// const scrollPosition = button.offsetLeft - (container.offsetWidth - button.offsetWidth) / 2;
+//                     container.scrollTo({
+//                         left: scrollPosition,
+//                         behavior: 'smooth'
+//                     });
+// const tab = document.querySelectorAll('.rooms-pagination__item');
+// const container = document.querySelector('.rooms-pagination__list');
+// tab.forEach((item, index) => {
+//     const scrollPosition = item.offsetLeft - (container.offsetWidth - item.offsetWidth) / 2;
+
+//     item.addEventListener('click', () => {
+//         if ((index !== 0) & (index !== tab.length - 1)) {
+//             container.scrollTo({
+//                 left: scrollPosition,
+//                 behavior: 'smooth',
+//             });
+//         } else {
+//             return;
+//         }
+//     });
+// });
+// tab.forEach(item => {
+//     item.addEventListener('click', () => {
+
+//     })
+// })

@@ -19,69 +19,83 @@
         max-width: 250px;
     }
 }
-.bullets {
-    position: relative;
-    bottom: 0 !important;
+//PAGINATION
+//PLANS
+.plans-pagination {
     display: flex;
+    justify-content: center;
     align-items: center;
-}
-.swiper-pagination-bullet {
-    flex-shrink: 0;
-}
-.house-details-section .swiper-pagination-bullets-dynamic {
-    display: none;
-    @include mobile {
+    justify-self: center;
+    column-gap: 10px;
+    width: 100%;
+    height: 15px;
+
+    &__bullet {
+        background-color: rgba(171, 219, 242, 1);
+        width: 6px;
+        height: 6px;
         display: block;
+        flex-shrink: 0;
+        border-radius: 50%;
+        transition: $transition;
+        cursor: pointer;
+        &_main {
+            width: 13.33px;
+            height: 13.33px;
+            &-prev,
+            &-next {
+                width: 10px;
+                height: 10px;
+            }
+            &-prev-prev,
+            &-next-next {
+                width: 6.67px;
+                height: 6.67px;
+            }
+        }
     }
 }
-.swiper-pagination-bullet-active {
-    width: 13px !important;
-    height: 13px !important;
-    @include laptop {
-        width: 10px !important;
-        height: 10px !important;
-    }
-}
-.swiper-pagination-bullet-active-next-next,
-.swiper-pagination-bullet-active-prev-prev {
-    width: 6.6px !important;
-    height: 6.6px !important;
-    transform: scale(1) !important;
-    @include laptop {
-        width: 5px !important;
-        height: 5px !important;
-    }
-}
-.swiper-pagination-bullet-active-next,
-.swiper-pagination-bullet-active-prev {
-    width: 10px !important;
-    height: 10px !important;
-    transform: scale(1) !important;
-    @include laptop {
-        width: 7.5px !important;
-        height: 7.5px !important;
-    }
-}
-.swiper-pagination-bullet-active-prev,
-.swiper-pagination-bullet-active-next {
-    opacity: 1 !important;
-    transform: scale(1) !important;
-}
-.swiper-pagination-bullet {
-    background-color: #abdbf2 !important;
-    opacity: 1 !important;
-    // margin: 0 !important;
-}
-.clickable-pagination {
-    width: 100% !important;
-    transform: translate(0) !important;
-}
-.bullets {
-    position: relative;
-    display: flex;
+//HOUSE
+.house-pagination {
+    display: none;
+    justify-content: center;
     align-items: center;
+    justify-self: center;
+    column-gap: 10px;
+    width: 100%;
+    height: 15px;
+    @include mobile {
+        display: flex;
+    }
+    &__bullet {
+        background-color: rgba(171, 219, 242, 1);
+        width: 4px;
+        height: 4px;
+
+        display: block;
+        flex-shrink: 0;
+        border-radius: 50%;
+        transition: $transition;
+        cursor: pointer;
+        &_main {
+            width: 8px;
+            height: 8px;
+            &-prev,
+            &-next {
+                width: 6px;
+                height: 6px;
+            }
+            &-prev-prev,
+            &-next-next {
+                width: 4px;
+                height: 4px;
+            }
+            &-main {
+                width: 10px;
+                height: 10px;
+                transform: scale(1.1);
+            }
+        }
+    }
 }
-.active-cusom-bullet-main {
-    width: 10px;
-    height: 10px;
-}
+//ROOMS

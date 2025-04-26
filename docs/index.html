@@ -3,7 +3,7 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/libs/swiper.min.js"></script>
+    <!-- <script src="js/libs/swiper.min.js"></script> -->
 <script src="js/libs/fancybox.umd.js"></script>
 <script src="js/libs/inputmask.min.js"></script>
 <script type="module" src="js/app.min.js"></script>
@@ -144,13 +144,49 @@
                 </a>
             </div>
         </div>
+        <div class="rooms-pagination pagination-slider">
+            <ul class="rooms-pagination__list swiper-wrapper">
+                <li
+                    class="rooms-pagination__item rooms-pagination__item-active swiper-slide"
+                    data-label="Вся квартира"
+                    data-index="0"
+                    data-text="Проверка динного текста шла саша по шоссе и сосала сушку"
+                >
+                    <p class="rooms-pagination__item-text">Вся квартира</p>
+                </li>
+                <li class="rooms-pagination__item swiper-slide" data-index="1">
+                    <p class="rooms-pagination__item-text">Гостиная</p>
+                </li>
+                <li class="rooms-pagination__item swiper-slide" data-index="2">
+                    <p class="rooms-pagination__item-text">Ванная</p>
+                </li>
+                <li class="rooms-pagination__item swiper-slide" data-index="3">
+                    <p class="rooms-pagination__item-text">Кухня</p>
+                </li>
+                <li class="rooms-pagination__item swiper-slide" data-index="4">
+                    <p class="rooms-pagination__item-text">Спальня</p>
+                </li>
+                <li class="rooms-pagination__item swiper-slide" data-index="5">
+                    <p class="rooms-pagination__item-text">Детская</p>
+                </li>
+                <li class="rooms-pagination__item swiper-slide" data-index="6">
+                    <p class="rooms-pagination__item-text">Зал</p>
+                </li>
+                <li class="rooms-pagination__item swiper-slide" data-index="7">
+                    <p class="rooms-pagination__item-text">Санузел</p>
+                </li>
+                <li class="rooms-pagination__item swiper-slide" data-index="8">
+                    <p class="rooms-pagination__item-text">Лоджия</p>
+                </li>
+            </ul>
+        </div>
     </div>
     <div class="swiper-container rooms-swiper-outer">
         <div class="swiper-wrapper">
             <div
                 class="swiper-slide outer-slide"
                 data-label="Вся квартира"
-                data-text="Проверка динного текста шла саша по шоссе и сосала сушку"
+                data-text="Просторная квартира для большой семьи"
             >
                 <div class="swiper-container rooms-swiper-inner">
                     <div class="swiper-wrapper">
@@ -1066,9 +1102,10 @@
                 </div>
             </div>
         </div>
-        <ul class="rooms-review__slider-points slider-points"></ul>
-        <div class="mobile-sticker">
-            <p class="mobile-sticker__desc">gdffg</p>
+    </div>
+    <div class="container">
+        <div class="current-room-info">
+            <p class="current-room-info__text">Просторная квартира для большой семьи</p>
         </div>
     </div>
 </section>
@@ -1569,38 +1606,8 @@
                             height="458"
                         />
                     </li>
-                    <li class="plans-list__item plan-card swiper-slide">
-                        <div class="plan-card__price">
-                            <div class="plan-card__info-group">
-                                <p class="plan-card__title">Стоимость, млн. ₽</p>
-                                <p class="plan-card__value">20,6</p>
-                            </div>
-                            <div class="plan-card__info-group">
-                                <p class="plan-card__title">Площадь</p>
-                                <p class="plan-card__value">91 м<sup>2</sup></p>
-                            </div>
-                        </div>
-                        <a href="#" class="plan-card__details-link text-gradient"> Подробнее </a>
-                        <div class="plan-card__details">
-                            <div class="plan-card__info-group">
-                                <p class="plan-card__title">Этаж</p>
-                                <p class="plan-card__value">18</p>
-                            </div>
-                            <div class="plan-card__info-group">
-                                <p class="plan-card__title">Номер квартиры</p>
-                                <p class="plan-card__value">202</p>
-                            </div>
-                        </div>
-                        <img
-                            src="img/slider/plans/plan_01.png"
-                            alt="План квартиры"
-                            class="plan-card__image"
-                            width="445"
-                            height="458"
-                        />
-                    </li>
                 </ul>
-                <div class="bullets"></div>
+                <div class="plans-pagination"></div>
             </div>
         </div>
         <a href="" class="action-element plans__action-element plans__action-element_mob"
@@ -1784,56 +1791,6 @@
                             </svg>
                         </button>
                     </li>
-
-                    <li
-                        class="house-slider__item house-slider__item_th swiper-slide"
-                        data-fancybox="house"
-                        data-src="img/slider/house/house-slide_03.jpeg"
-                    >
-                        <img
-                            src="img/slider/house/house-slide_03.jpeg"
-                            alt=""
-                            class="house-slider__slide-image"
-                        />
-                        <button class="resize-btn house-slider__resize-btn">
-                            <svg class="icon">
-                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                            </svg>
-                        </button>
-                    </li>
-                    <li
-                        class="house-slider__item house-slider__item_f swiper-slide"
-                        data-fancybox="house"
-                        data-src="img/slider/house/house-slide_01.jpeg"
-                    >
-                        <img
-                            src="img/slider/house/house-slide_01.jpeg"
-                            alt=""
-                            class="house-slider__slide-image"
-                        />
-                        <button class="resize-btn house-slider__resize-btn">
-                            <svg class="icon">
-                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                            </svg>
-                        </button>
-                    </li>
-                    <li
-                        class="house-slider__item house-slider__item_s swiper-slide"
-                        data-fancybox="house"
-                        data-src="img/slider/house/house-slide_02.jpeg"
-                    >
-                        <img
-                            src="img/slider/house/house-slide_02.jpeg"
-                            alt=""
-                            class="house-slider__slide-image"
-                        />
-                        <button class="resize-btn house-slider__resize-btn">
-                            <svg class="icon">
-                                <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                            </svg>
-                        </button>
-                    </li>
-
                     <li
                         class="house-slider__item house-slider__item_th swiper-slide"
                         data-fancybox="house"
@@ -1900,7 +1857,7 @@
                         </button>
                     </li>
                 </ul>
-                <div class="bullets"></div>
+                <div class="house-pagination"></div>
             </div>
         </div>
     </div>
