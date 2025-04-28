@@ -103,19 +103,24 @@
 }
 //FORMS
 .request-form {
-    max-width: 376px;
+    max-width: 453px;
     width: 100%;
+    @include laptop {
+        max-width: 376px;
+    }
 
     &__input {
         border-radius: $round-m;
         border: 1px solid #01a252;
         outline: #01a252;
-        padding-top: 16px;
-        padding-bottom: 16px;
+        height: 72px;
         padding-left: 20px;
         padding-right: 20px;
         width: 100%;
         margin-bottom: 24px;
+        @include laptop {
+            height: 56px;
+        }
         &::placeholder {
             color: #9b9b9b;
             font-size: 16px;

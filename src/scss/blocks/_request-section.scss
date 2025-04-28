@@ -46,7 +46,7 @@
         line-height: 55px;
         color: #436870;
         @include laptop {
-            font-size: 32px;
+            font-size: 31px;
             line-height: 37px;
         }
         @include tablet {
@@ -102,23 +102,24 @@
     }
     &__image {
         border-radius: 93px 26px 93px 26px;
-        width: 628px;
-        height: 418px;
+        width: 701px;
+        height: 632px;
         overflow: hidden;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
-        background-image: url(../img/meeting_image.jpeg);
+        background-image: url(../img/meating.jpeg);
 
         @include laptop {
             border-radius: 70px 20px 70px 20px;
+            width: 628px;
+            height: 418px;
         }
         @include tablet {
             width: 100%;
             border-radius: 50px;
         }
         @include mobile {
-            background-image: url(../img/meeting_image_xs.jpeg);
             height: 375px;
         }
     }

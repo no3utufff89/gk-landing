@@ -1097,7 +1097,7 @@ html.with-fancybox body.hide-scrollbar {
 .fancybox__container {
   --fancybox-color: #dbdbdb;
   --fancybox-hover-color: #fff;
-  --fancybox-bg: rgba(24, 24, 27, 0.98);
+  --fancybox-bg: rgba(45, 46, 55, 0.75);
   --fancybox-slide-gap: 10px;
   --f-spinner-width: 50px;
   --f-spinner-height: 50px;
@@ -1158,7 +1158,7 @@ html.with-fancybox body.hide-scrollbar {
   bottom: 0;
   right: 0;
   z-index: -1;
-  background: var(--fancybox-bg);
+  background: rgba(45, 46, 55, 0.75) !important;
   opacity: var(--fancybox-opacity, 1);
   will-change: opacity;
 }
@@ -2388,7 +2388,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .request-form {
-  max-width: 376px;
+  max-width: 453px;
   width: 100%;
 }
 
@@ -2396,8 +2396,7 @@ html.with-fancybox body.hide-scrollbar {
   border-radius: 20px;
   border: 1px solid #01a252;
   outline: #01a252;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  height: 72px;
   padding-left: 20px;
   padding-right: 20px;
   width: 100%;
@@ -2639,8 +2638,19 @@ html.with-fancybox body.hide-scrollbar {
   transition: 0.3s ease-in-out;
 }
 
+.no-webp .offer-block__image{
+  background-image: url(../img/offer_image.jpeg); }
+
 .offer-block__image {
   border-radius: 32px;
+  width: 200px;
+  height: 210px;
+  -webkit-filter: opacity(0.8);
+          filter: opacity(0.8);
+  background-repeat: no-repeat;
+  background-size: 406px 238px;
+  background-repeat: no-repeat;
+  background-position: center left -33px;
 }
 
 .offer-block__image img {
@@ -2752,11 +2762,11 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .no-webp .welcome{
-  background-image: -webkit-image-set(url(../img/welcome_image.jpeg) type("image/jpeg") 1x, url(../img/welcome_image.webp) type("image/webp") 1x);
-  background-image: image-set(url(../img/welcome_image.jpeg) type("image/jpeg") 1x, url(../img/welcome_image.webp) type("image/webp") 1x); }
+  background-image: -webkit-image-set(url(../img/welcome_image.png) type("image/png") 1x, url(../img/welcome_image.webp) type("image/webp") 1x);
+  background-image: image-set(url(../img/welcome_image.png) type("image/png") 1x, url(../img/welcome_image.webp) type("image/webp") 1x); }
 
 .no-webp .welcome{
-  background-image: -webkit-image-set(url(../img/welcome_image.jpeg) 1x, url(../img/welcome_image.webp) 1x); }
+  background-image: -webkit-image-set(url(../img/welcome_image.png) 1x, url(../img/welcome_image.webp) 1x); }
 
 .welcome {
   background-repeat: no-repeat;
@@ -3193,8 +3203,8 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .rooms-list__item {
-  height: 800px;
-  width: 1066px;
+  height: 720px;
+  width: 960px;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   -webkit-box-flex: 0;
@@ -3269,7 +3279,7 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .room.swiper-slide {
-  width: 1066px;
+  width: 960px;
 }
 
 .slider-wrapper {
@@ -3304,7 +3314,7 @@ html.with-fancybox body.hide-scrollbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: -15%;
+  margin-left: -2%;
 }
 
 .outer-slide,
@@ -3412,11 +3422,11 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .no-webp .video{
-  background-image: -webkit-image-set(url(../img/video_preview.jpg) type("image/jpeg") 1x, url(../img/video_preview.webp) type("image/webp") 1x);
-  background-image: image-set(url(../img/video_preview.jpg) type("image/jpeg") 1x, url(../img/video_preview.webp) type("image/webp") 1x); }
+  background-image: -webkit-image-set(url(../img/video_preview.png) type("image/jpeg") 1x, url(../img/video_preview.webp) type("image/webp") 1x);
+  background-image: image-set(url(../img/video_preview.png) type("image/jpeg") 1x, url(../img/video_preview.webp) type("image/webp") 1x); }
 
 .no-webp .video{
-  background-image: -webkit-image-set(url(../img/video_preview.jpg) 1x, url(../img/video_preview.webp) 1x); }
+  background-image: -webkit-image-set(url(../img/video_preview.png) 1x, url(../img/video_preview.webp) 1x); }
 
 .video {
   height: 935px;
@@ -3926,9 +3936,17 @@ html.with-fancybox body.hide-scrollbar {
           transform: translateY(155px);
 }
 
+.detail-card__header {
+  border-radius: 32px;
+  overflow: hidden;
+  height: 245px;
+}
+
 .detail-card__image {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .detail-card__body {
@@ -4114,12 +4132,12 @@ html.with-fancybox body.hide-scrollbar {
 }
 
 .no-webp .request-section__image{
-  background-image: url(../img/meeting_image.jpeg); }
+  background-image: url(../img/meating.jpeg); }
 
 .request-section__image {
   border-radius: 93px 26px 93px 26px;
-  width: 628px;
-  height: 418px;
+  width: 701px;
+  height: 632px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
@@ -5343,6 +5361,14 @@ html.with-fancybox body.hide-scrollbar {
     row-gap: 19px;
   }
 
+  .request-form {
+    max-width: 376px;
+  }
+
+  .request-form__input {
+    height: 56px;
+  }
+
   .burger-menu {
     -ms-grid-column-align: end;
         justify-self: end;
@@ -5386,6 +5412,7 @@ html.with-fancybox body.hide-scrollbar {
   }
 
   .offer-block__image {
+    width: 168px;
     height: 176px;
   }
 
@@ -5587,6 +5614,10 @@ html.with-fancybox body.hide-scrollbar {
 
   .rooms-swiper-outer > .swiper-wrapper {
     margin-bottom: 24px;
+  }
+
+  .rooms-swiper-inner > .swiper-wrapper {
+    margin-left: -1%;
   }
 
   .slider-points__point {
@@ -5800,7 +5831,7 @@ html.with-fancybox body.hide-scrollbar {
   }
 
   .request-section__title {
-    font-size: 32px;
+    font-size: 31px;
     line-height: 37px;
   }
 
@@ -5824,6 +5855,8 @@ html.with-fancybox body.hide-scrollbar {
 
   .request-section__image {
     border-radius: 70px 20px 70px 20px;
+    width: 628px;
+    height: 418px;
   }
 
   .map-section__container {
@@ -7425,9 +7458,6 @@ html.with-fancybox body.hide-scrollbar {
     line-height: 100%;
   }
 
-  .no-webp .request-section__image{
-    background-image: url(../img/meeting_image_xs.jpeg); }
-
   .request-section__image {
     height: 375px;
   }
@@ -7890,7 +7920,9 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 
-.webp .welcome{ background-image: -webkit-image-set(url(../img/welcome_image.webp) type("image/jpeg") 1x, url(../img/welcome_image.webp) type("image/webp") 1x); background-image: image-set(url(../img/welcome_image.webp) type("image/jpeg") 1x, url(../img/welcome_image.webp) type("image/webp") 1x); }
+.webp .offer-block__image{ background-image: url(../img/offer_image.webp); }
+
+.webp .welcome{ background-image: -webkit-image-set(url(../img/welcome_image.webp) type("image/png") 1x, url(../img/welcome_image.webp) type("image/webp") 1x); background-image: image-set(url(../img/welcome_image.webp) type("image/png") 1x, url(../img/welcome_image.webp) type("image/webp") 1x); }
 
 .webp .welcome{ background-image: -webkit-image-set(url(../img/welcome_image.webp) 1x, url(../img/welcome_image.webp) 1x); }
 
@@ -7906,7 +7938,7 @@ html.with-fancybox body.hide-scrollbar {
 
 .webp .advantages__cload_right{ background-image: url(../img/cload.webp); }
 
-.webp .request-section__image{ background-image: url(../img/meeting_image.webp); }
+.webp .request-section__image{ background-image: url(../img/meating.webp); }
 
 .webp .family-section__image{ background-image: url(../img/family.webp); }
 
@@ -7915,9 +7947,4 @@ html.with-fancybox body.hide-scrollbar {
 @media (max-width: 1000px){
 
   .webp .map-section__map-cover{ background-image: url(../img/map.webp); }
-}
-
-@media (max-width: 768px){
-
-  .webp .request-section__image{ background-image: url(../img/meeting_image_xs.webp); }
 }

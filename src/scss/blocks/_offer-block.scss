@@ -19,7 +19,16 @@
 
     &__image {
         border-radius: $round-l;
+        width: 200px;
+        height: 210px;
+        filter: opacity(0.8);
+        background-image: url(../img/offer_image.jpeg);
+        background-repeat: no-repeat;
+        background-size: 406px 238px;
+        background-repeat: no-repeat;
+        background-position: center left -33px;
         @include laptop {
+            width: 168px;
             height: 176px;
         }
         img {
