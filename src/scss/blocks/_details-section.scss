@@ -59,11 +59,24 @@
         border-radius: 32px;
         overflow: hidden;
         height: 245px;
+        @media screen and (max-width: 1000px) {
+            height: 220px;
+        }
+        @media screen and (max-width: 768px) {
+            border-radius: 20px;
+            height: 150px;
+        }
+        @media screen and (max-width: 400px) {
+            height: 103px;
+        }
     }
+
     &__image {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        @include mobile {
+        }
     }
     &__body {
         padding-bottom: 24px;

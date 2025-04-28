@@ -4141,7 +4141,8 @@ html.with-fancybox body.hide-scrollbar {
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 1029px;
+  background-position: center left -86px;
 }
 
 .map-section {
@@ -5855,6 +5856,8 @@ html.with-fancybox body.hide-scrollbar {
 
   .request-section__image {
     border-radius: 70px 20px 70px 20px;
+    background-position: center left -75px;
+    background-size: 772px;
     width: 628px;
     height: 418px;
   }
@@ -6482,6 +6485,8 @@ html.with-fancybox body.hide-scrollbar {
   }
 
   .request-section__image {
+    background-size: 115%;
+    background-position: center;
     width: 100%;
     border-radius: 50px;
   }
@@ -6988,6 +6993,12 @@ html.with-fancybox body.hide-scrollbar {
   }
 }
 
+@media screen and (max-width: 1000px) {
+  .detail-card__header {
+    height: 220px;
+  }
+}
+
 @media screen and (max-width: 990px) {
   .welcome > .container {
     -ms-grid-columns: 1fr;
@@ -7460,6 +7471,8 @@ html.with-fancybox body.hide-scrollbar {
 
   .request-section__image {
     height: 375px;
+    background-size: 163%;
+    background-position: center;
   }
 
   .map-content__title {
@@ -7822,6 +7835,19 @@ html.with-fancybox body.hide-scrollbar {
 
   .questions__subtitle {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detail-card__header {
+    border-radius: 20px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .detail-card__header {
+    height: 103px;
   }
 }
 

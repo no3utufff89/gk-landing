@@ -107,20 +107,28 @@
         overflow: hidden;
         background-repeat: no-repeat;
         background-position: center;
-        background-size: cover;
+        background-size: 1029px;
         background-image: url(../img/meating.jpeg);
+        background-position: center left -86px;
 
         @include laptop {
             border-radius: 70px 20px 70px 20px;
+            background-position: center left -75px;
+            background-size: 772px;
             width: 628px;
             height: 418px;
         }
         @include tablet {
+            background-size: 115%;
+            background-position: center;
             width: 100%;
             border-radius: 50px;
         }
         @include mobile {
             height: 375px;
+
+            background-size: 163%;
+            background-position: center;
         }
     }
 }
