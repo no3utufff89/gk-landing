@@ -72,7 +72,7 @@ export const SLIDER_SETTINGS = {
         spaceBetween: 40,
         preventClicks: true,
         speed: 800,
-        initialSlide: 3,
+        initialSlide: 0,
         slidesPerView: 'auto',
         slidesPerGroup: 3,
         navigation: {
