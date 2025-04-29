@@ -2,11 +2,12 @@ import { Controller, Navigation, Pagination } from 'swiper/modules';
 import { SLIDER_SETTINGS } from './settings.js';
 import 'swiper/css/pagination';
 import Swiper from 'swiper';
-let outerSlider;
-let innerSlider;
-let paginationSlider;
 
 export const roomsSlider = () => {
+    const winDowsize = window.innerWidth;
+    let outerSlider;
+    let innerSlider;
+    let paginationSlider;
     outerSlider = new Swiper('.rooms-swiper-outer', {
         modules: [Navigation, Controller],
         loop: true,
@@ -15,9 +16,6 @@ export const roomsSlider = () => {
         observer: true,
         spaceBetween: 40,
         allowTouchMove: false,
-        // thumbs: {
-        //     swiper: paginationSlider,
-        // },
     });
 
     innerSlider = new Swiper('.rooms-swiper-inner', {
@@ -49,35 +47,47 @@ export const roomsSlider = () => {
     });
     paginationSlider = new Swiper('.pagination-slider', {
         modules: [Controller],
-        slideToClickedSlide: true,
-        // init: false,
         enabled: true,
         slidesPerView: 'auto',
-        // slidesOffsetBefore: 0,
-
         centeredSlides: true,
         virtualTranslate: false,
         setWrapperSize: true,
         watchSlidesProgress: false,
         centeredSlidesBounds: true,
+        preventInteractionOnTransition: true,
         initialSlide: 1,
-        // virtualTranslate: true,
-
         breakpoints: {
             1260: {
-                // spaceBetween: 10,
                 allowTouchMove: false,
                 slidesPerView: 'auto',
             },
             300: {
                 spaceBetween: 8,
-                allowTouchMove: false,
+                allowTouchMove: true,
             },
         },
     });
-    // paginationSlider.wrapperEl.style.transform = 'translateX(10px)';
-    // paginationSlider.slidesEl.style.width = '50px';
-    // paginationSlider.controller.control = outerSlider;
+
+    const pagButtons = [...document.querySelectorAll('.rooms-pagination__item')];
+
+    pagButtons.forEach((item, index) => {
+        item.addEventListener('click', () => {
+            const dataIndex = item.getAttribute('data-index');
+            for (let i = 0; i < pagButtons.length; i += 1) {
+                if (index === i) {
+                    pagButtons[i].classList.add('rooms-pagination__item-active');
+                } else {
+                    pagButtons[i].classList.remove('rooms-pagination__item-active');
+                }
+            }
+            outerSlider.slideTo(dataIndex, 100, false);
+            paginationSlider.slideToClickedSlide();
+            const allSlideCategories = [...document.querySelectorAll('.outer-slide')];
+            const dataText = allSlideCategories[index].getAttribute('data-text');
+            const dataTextDest = document.querySelector('.current-room-info__text');
+            dataTextDest.textContent = dataText;
+        });
+    });
 };
 export const createPlansSlider = sliderContainerTagName => {
     new Swiper(sliderContainerTagName, SLIDER_SETTINGS.plansSlider);
@@ -109,27 +119,3 @@ export function createHouseSlider(sliderContainerTagName) {
         },
     });
 }
-
-const pagButtons = [...document.querySelectorAll('.rooms-pagination__item')];
-
-pagButtons.forEach((item, index) => {
-    item.addEventListener('click', () => {
-        const dataIndex = item.getAttribute('data-index');
-
-        outerSlider.slideTo(dataIndex, 800, false);
-
-        const allSlideCategories = [...document.querySelectorAll('.outer-slide')];
-        const dataText = allSlideCategories[index].getAttribute('data-text');
-        const dataTextDest = document.querySelector('.current-room-info__text');
-        dataTextDest.textContent = dataText;
-        console.log(`realIndex`, index);
-
-        // console.log(`realIndex`, realIndex);
-
-        // console.log('outerIndex', outerSlider.activeIndex);
-
-        // console.log(paginationSlider.getTranslate());
-
-        // console.log(`paginationSlider.minTranslate()`, paginationSlider.minTranslate());
-    });
-});

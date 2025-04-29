@@ -47,12 +47,8 @@ export const roomsSlider = () => {
     });
     paginationSlider = new Swiper('.pagination-slider', {
         modules: [Controller],
-        // slideToClickedSlide: true,
-        // init: false,
         enabled: true,
         slidesPerView: 'auto',
-        // slidesOffsetBefore: 0,
-
         centeredSlides: true,
         virtualTranslate: false,
         setWrapperSize: true,
@@ -60,12 +56,8 @@ export const roomsSlider = () => {
         centeredSlidesBounds: true,
         preventInteractionOnTransition: true,
         initialSlide: 1,
-        // resistance: false,
-        // virtualTranslate: true,
-
         breakpoints: {
             1260: {
-                // spaceBetween: 10,
                 allowTouchMove: false,
                 slidesPerView: 'auto',
             },

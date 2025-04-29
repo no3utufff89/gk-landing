@@ -1,8 +1,4 @@
 import { createFancy } from './funcyModals.js';
-import { Swiper } from 'swiper';
-import { Navigation } from 'swiper/modules';
-import { SLIDER_SETTINGS } from './settings.js';
-import ElementDto from './functions.js';
 //eyes control
 export function eyeControls(elements) {
     elements.eyeBtn.forEach((eye, index) => {

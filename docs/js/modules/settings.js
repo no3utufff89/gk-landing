@@ -72,7 +72,7 @@ export const SLIDER_SETTINGS = {
         spaceBetween: 40,
         preventClicks: true,
         speed: 800,
-        initialSlide: 3,
+        initialSlide: 0,
         slidesPerView: 'auto',
         slidesPerGroup: 3,
         navigation: {
@@ -87,7 +87,7 @@ export const SLIDER_SETTINGS = {
         pagination: {
             el: '.house-pagination',
             dynamicBullets: true,
-            dynamicMainBullets: 2,
+            dynamicMainBullets: 1,
             clickable: true,
             bulletClass: 'house-pagination__bullet',
             modifierClass: 'house-pagination__',
