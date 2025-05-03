@@ -1,5 +1,7 @@
 import { createFancy } from './funcyModals.js';
 //eyes control
+let paddingValue =
+    window.innerWidth > 325 ? window.innerWidth - document.documentElement.clientWidth + 'px' : 0;
 export function eyeControls(elements) {
     elements.eyeBtn.forEach((eye, index) => {
         eye.addEventListener('click', () => {
@@ -36,4 +38,23 @@ export function videoControl(elements) {
 
 export const scrollYControl = elem => {
     return window.innerWidth;
+};
+export const disableScroll = () => {
+    document.body.classList.add('no-scroll');
+    document.body.style.cssText = `
+    padding-right: ${paddingValue};
+    `;
+};
+export const enableScroll = () => {
+    document.body.classList.remove('no-scroll');
+    document.body.style.cssText = '';
+};
+export const openModal = modal => {
+    disableScroll();
+    modal.classList.add('open');
+    modal.querySelector('.modal__overlay').classList.add('open');
+};
+export const closeModal = modal => {
+    modal.querySelector('.modal__overlay').classList.remove('open');
+    modal.classList.remove('open');
 };

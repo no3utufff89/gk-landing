@@ -1,5 +1,53 @@
-<div class="modal">
-    <div class="modal__overlay open">
-        <div class="modal__content"></div>
+<div class="modal" id="question-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#popup-close"></use>
+                </svg>
+            </button>
+            <div class="modal__top">
+                <h3>Остались<br />вопросы?</h3>
+                <div class="modal__img">
+                    <img src="@img/house-left-sm.png" alt="" />
+                </div>
+            </div>
+            <div class="modal__form">
+                <h6>Мы перезвоним вам в течение 5 мин и ответим на все вопросы</h6>
+                <form action="" class="form">
+                    <div class="form__item">
+                        <input required type="text" placeholder="Имя" />
+                    </div>
+                    <div class="form__item form__item--tel">
+                        <input required type="tel" inputmode="text" />
+                        <div class="form__placeholder">
+                            <span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn main-btn modal__btn">
+                            <span>оставить заявку</span>
+                        </button>
+                        <p class="form__txt">
+                            Нажимая на кнопку «Оставить заявку», я даю согласие на
+                            <a href="#">обработку персональных данных</a> и условия
+                            <a href="#">политики конфиденциальности</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#popup-close"></use>
+                </svg>
+            </button>
+            <h3>Заявка<br />отправлена!</h3>
+        </div>
     </div>
 </div>

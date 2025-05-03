@@ -55,22 +55,21 @@
     }
 
     &__item {
-        height: 720px;
-        width: 960px;
         flex-shrink: 0;
-        flex-grow: 0;
+        height: inherit;
         border-radius: 24px;
         overflow: visible;
+
         @include laptop {
-            width: 800px;
+            // width: 800px;
             height: 600px;
         }
         @include tablet {
-            width: 600px;
-            height: 400px;
+            // width: 600px;
+            height: inherit;
         }
         @include mobile {
-            width: 335px;
+            // width: 335px;
             height: 252px;
         }
         img {
@@ -150,15 +149,6 @@
     &__img {
         object-fit: cover;
     }
-    &.swiper-slide {
-        width: 960px;
-        @include laptop {
-            width: 800px;
-        }
-        @include tablet {
-            width: 335px;
-        }
-    }
 }
 
 .slider-wrapper {
@@ -204,15 +194,24 @@
 }
 .rooms-swiper-inner > .swiper-wrapper {
     display: flex;
-    margin-left: -2%;
-    @include laptop {
-        margin-left: -1%;
-    }
 }
 .outer-slide,
 .inner-slide {
     flex-shrink: 0;
     overflow: hidden;
+}
+.inner-slide {
+    height: 700px;
+    width: 960px;
+    flex-grow: 1;
+    @include laptop {
+        height: 600px;
+        width: 800px;
+    }
+    @include tablet {
+        height: 252px;
+        width: 335px;
+    }
 }
 .active-bullet-main {
     background-color: rgba(219, 243, 253, 1);

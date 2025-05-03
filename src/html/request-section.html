@@ -1,4 +1,4 @@
-<section class="request-section">
+<section class="request-section" id="request">
     <div class="container">
         <div class="request-section__col">
             <div class="request-section__image"></div>
@@ -14,8 +14,13 @@
                 </div>
 
                 <form action="#" class="request-form" id="request-form">
-                    <input type="text" class="request-form__input" placeholder="Имя" />
-                    <input type="tel" class="request-form__input" placeholder="+7 000-000-00-00" />
+                    <input required type="text" class="request-form__input" placeholder="Имя" />
+                    <input
+                        required
+                        type="tel"
+                        class="request-form__input"
+                        placeholder="+7 000-000-00-00"
+                    />
                     <button class="action-element request-form__btn">
                         <span>Оставить заявку</span>
                     </button>

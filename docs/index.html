@@ -3,11 +3,8 @@
     <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script type="defer" src="js/libs/fancybox.umd.js"></script>
-<script type="module" src="js/libs/inputmask.min.js"></script>
-<script type="module" src="js/app.min.js"></script>
 
-    <link rel="preload" as="image" href="img/welcome_image.png" />
+    <link rel="prefetch" as="image" href="img/welcome_image.png" />
     <link rel="stylesheet" href="css/style.min.css" />
     <title>главная</title>
 </head>
@@ -64,16 +61,14 @@
                 Трёхкомнатная квартира для вашей семьи прямо у парка Швейцария
             </h1>
             <div class="welcome__controls">
-                <a href="#" class="action-element welcome__action-element">
+                <a href="#plans" class="action-element welcome__action-element">
                     <span>Смотреть планировки</span>
                 </a>
-                <a href="#" class="welcome__callback-link"> Оставить заявку </a>
+                <a href="#request" class="welcome__callback-link"> Оставить заявку </a>
             </div>
         </div>
         <div class="welcome__offer offer-block">
-            <div class="offer-block__image">
-                <!-- <picture><source srcset="img/offer_image.webp" type="image/webp"><img src="img/offer_image.jpeg" alt="offer-image" width="200" height="210" /></picture> -->
-            </div>
+            <div class="offer-block__image"></div>
             <div class="offer-block__content">
                 <p class="offer-block__title">3х комнатные квартиры от 100 000 ₽ за м²</p>
                 <a href="#" class="offer-block__link">
@@ -192,80 +187,6 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide inner-slide">
                             <div
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_01.jpeg"
-                                class="rooms-list__item room swiper-slide"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_01.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
-                                class="rooms-list__item room swiper-slide"
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_02.jpeg"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_02.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
-                                class="rooms-list__item room swiper-slide"
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_03.jpeg"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_03.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_01.jpeg"
-                                class="rooms-list__item room swiper-slide"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_01.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
                                 class="rooms-list__item room swiper-slide"
                                 data-fancybox="all"
                                 data-src="img/slider/rooms/room_image_02.jpeg"
@@ -294,7 +215,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide inner-slide">
                             <div
-                                data-fancybox="all"
+                                data-fancybox="living_room"
                                 data-src="img/slider/rooms/room_image_01.jpeg"
                                 class="rooms-list__item room swiper-slide"
                             >
@@ -314,62 +235,7 @@
                         <div class="swiper-slide inner-slide">
                             <div
                                 class="rooms-list__item room swiper-slide"
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_02.jpeg"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_02.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
-                                class="rooms-list__item room swiper-slide"
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_03.jpeg"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_03.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_01.jpeg"
-                                class="rooms-list__item room swiper-slide"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_01.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
-                                class="rooms-list__item room swiper-slide"
-                                data-fancybox="all"
+                                data-fancybox="living_room"
                                 data-src="img/slider/rooms/room_image_02.jpeg"
                             >
                                 <img
@@ -439,43 +305,6 @@
                             >
                                 <img
                                     src="img/slider/rooms/room_image_03.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_01.jpeg"
-                                class="rooms-list__item room swiper-slide"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_01.jpeg"
-                                    alt=""
-                                    class="room__img"
-                                />
-
-                                <button class="resize-btn room__resize-btn">
-                                    <svg class="icon">
-                                        <use xlink:href="img/icons/sprite.svg#resize_icon"></use>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="swiper-slide inner-slide">
-                            <div
-                                class="rooms-list__item room swiper-slide"
-                                data-fancybox="all"
-                                data-src="img/slider/rooms/room_image_02.jpeg"
-                            >
-                                <img
-                                    src="img/slider/rooms/room_image_02.jpeg"
                                     alt=""
                                     class="room__img"
                                 />
@@ -1349,7 +1178,7 @@
         </a>
     </div>
 </section>
- <section class="request-section">
+ <section class="request-section" id="request">
     <div class="container">
         <div class="request-section__col">
             <div class="request-section__image"></div>
@@ -1365,8 +1194,13 @@
                 </div>
 
                 <form action="#" class="request-form" id="request-form">
-                    <input type="text" class="request-form__input" placeholder="Имя" />
-                    <input type="tel" class="request-form__input" placeholder="+7 000-000-00-00" />
+                    <input required type="text" class="request-form__input" placeholder="Имя" />
+                    <input
+                        required
+                        type="tel"
+                        class="request-form__input"
+                        placeholder="+7 000-000-00-00"
+                    />
                     <button class="action-element request-form__btn">
                         <span>Оставить заявку</span>
                     </button>
@@ -1429,7 +1263,7 @@
     </div>
 </section>
 
-            <section class="plans">
+            <section class="plans" id="plans">
     <div class="container">
         <div class="plans__col">
             <div class="plans__info">
@@ -1625,9 +1459,13 @@
                 <p class="section-header__text bank-offers__text">
                     Мы можем предложить индивидуальные условия ипотечного кредитования
                 </p>
-                <a href="#" class="action-element bank-offers__action-element">
+                <button
+                    type="button"
+                    class="action-element bank-offers__action-element modalBtn"
+                    data-modal="#question-modal"
+                >
                     <span> Обсудить предложение </span>
-                </a>
+                </button>
             </div>
         </div>
         <ul class="banks-list">
@@ -1933,7 +1771,11 @@
             <div class="footer__questions questions">
                 <p class="questions__title text-gradient">Остались вопросы?</p>
                 <p class="questions__subtitle">Оставьте заявку и мы перезвоним!</p>
-                <form action="" class="questions-form footer__form">
+                <form
+                    action=""
+                    class="questions-form footer__form"
+                    onsubmit="event.preventDefault();succsessSubmit(this)"
+                >
                     <input type="text" class="questions-form__input" placeholder="Имя" />
                     <div class="questions-form__input-wrapper">
                         <input
@@ -1945,7 +1787,9 @@
                             <span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00
                         </div>
                     </div>
-                    <button class="questions-form__btn" type="submit">оставить заявку</button>
+                    <button class="questions-form__btn modal-btn" type="submit">
+                        оставить заявку
+                    </button>
                     <p class="questions-form__text">
                         Нажимая на кнопку «Оставить заявку», я даю согласие на
                         <a href="#">обработку персональных данных</a> и условия
@@ -1983,6 +1827,64 @@
         </div>
     </div>
 </footer>
+ <div class="modal" id="question-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#popup-close"></use>
+                </svg>
+            </button>
+            <div class="modal__top">
+                <h3>Остались<br />вопросы?</h3>
+                <div class="modal__img">
+                    <picture><source srcset="img/house-left-sm.webp" type="image/webp"><img src="img/house-left-sm.png" alt="" /></picture>
+                </div>
+            </div>
+            <div class="modal__form">
+                <h6>Мы перезвоним вам в течение 5 мин и ответим на все вопросы</h6>
+                <form action="" class="form">
+                    <div class="form__item">
+                        <input required type="text" placeholder="Имя" />
+                    </div>
+                    <div class="form__item form__item--tel">
+                        <input required type="tel" inputmode="text" />
+                        <div class="form__placeholder">
+                            <span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <button type="submit" class="btn main-btn modal__btn">
+                            <span>оставить заявку</span>
+                        </button>
+                        <p class="form__txt">
+                            Нажимая на кнопку «Оставить заявку», я даю согласие на
+                            <a href="#">обработку персональных данных</a> и условия
+                            <a href="#">политики конфиденциальности</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal success-modal">
+    <div class="modal__overlay">
+        <div class="modal__content">
+            <button class="modal__close" aria-label="Закрыть всплывающее окно">
+                <svg>
+                    <use xlink:href="img/icons/sprite.svg#popup-close"></use>
+                </svg>
+            </button>
+            <h3>Заявка<br />отправлена!</h3>
+        </div>
+    </div>
+</div>
+
+        <script type="defer" src="js/libs/fancybox.umd.js"></script>
+<script src="js/libs/inputmask.min.js"></script>
+<!-- <script src="js/libs/swiper.min.js"></script> -->
+<script src="js/app.min.js"></script>
 
     </body>
 </html>

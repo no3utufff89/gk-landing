@@ -54,7 +54,11 @@
             <div class="footer__questions questions">
                 <p class="questions__title text-gradient">Остались вопросы?</p>
                 <p class="questions__subtitle">Оставьте заявку и мы перезвоним!</p>
-                <form action="" class="questions-form footer__form">
+                <form
+                    action=""
+                    class="questions-form footer__form"
+                    onsubmit="event.preventDefault();succsessSubmit(this)"
+                >
                     <input type="text" class="questions-form__input" placeholder="Имя" />
                     <div class="questions-form__input-wrapper">
                         <input
@@ -66,7 +70,9 @@
                             <span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00
                         </div>
                     </div>
-                    <button class="questions-form__btn" type="submit">оставить заявку</button>
+                    <button class="questions-form__btn modal-btn" type="submit">
+                        оставить заявку
+                    </button>
                     <p class="questions-form__text">
                         Нажимая на кнопку «Оставить заявку», я даю согласие на
                         <a href="#">обработку персональных данных</a> и условия

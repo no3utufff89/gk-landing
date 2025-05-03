@@ -3,7 +3,7 @@ import { SLIDER_SETTINGS } from './settings.js';
 import 'swiper/css/pagination';
 import Swiper from 'swiper';
 
-export const roomsSlider = () => {
+export function roomsSlider() {
     const winDowsize = window.innerWidth;
     let outerSlider;
     let innerSlider;
@@ -27,6 +27,7 @@ export const roomsSlider = () => {
         initialSlide: 2,
         centeredSlides: false,
         spaceBetween: 21,
+
         breakpoints: {
             1440: {
                 spaceBetween: 21,
@@ -88,34 +89,34 @@ export const roomsSlider = () => {
             dataTextDest.textContent = dataText;
         });
     });
-};
-export const createPlansSlider = sliderContainerTagName => {
-    new Swiper(sliderContainerTagName, SLIDER_SETTINGS.plansSlider);
-    (function () {
-        const allSlides = document.querySelectorAll('.swiper-slide-duplicate');
-        allSlides.forEach(element => {
-            element.removeAttribute('data-fancybox');
-        });
-    })();
-};
-export function createHouseSlider(sliderContainerTagName) {
-    const houseSwiper = new Swiper(sliderContainerTagName, {
-        loop: true,
-        spaceBetween: 40,
-        slidesPerView: 'auto',
-        module: [Navigation, Pagination],
-        preventClicks: true,
-        speed: 800,
-        initialSlide: 3,
-        navigation: {
-            nextEl: '.house-slider__control_right',
-            prevEl: '.house-slider__control_left',
-        },
-        pagination: {
-            el: '.bullets',
-            dynamicBullets: 3,
-            dynamicMainBullets: 1,
-            clickable: true,
-        },
-    });
 }
+// export const createPlansSlider = sliderContainerTagName => {
+//     new Swiper(sliderContainerTagName, SLIDER_SETTINGS.plansSlider);
+//     (function () {
+//         const allSlides = document.querySelectorAll('.swiper-slide-duplicate');
+//         allSlides.forEach(element => {
+//             element.removeAttribute('data-fancybox');
+//         });
+//     })();
+// };
+// export function createHouseSlider(sliderContainerTagName) {
+//     const houseSwiper = new Swiper(sliderContainerTagName, {
+//         loop: true,
+//         spaceBetween: 40,
+//         slidesPerView: 'auto',
+//         module: [Navigation, Pagination],
+//         preventClicks: true,
+//         speed: 800,
+//         initialSlide: 3,
+//         navigation: {
+//             nextEl: '.house-slider__control_right',
+//             prevEl: '.house-slider__control_left',
+//         },
+//         pagination: {
+//             el: '.bullets',
+//             dynamicBullets: 3,
+//             dynamicMainBullets: 1,
+//             clickable: true,
+//         },
+//     });
+// }

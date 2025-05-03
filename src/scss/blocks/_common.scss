@@ -118,6 +118,7 @@
         padding-right: 20px;
         width: 100%;
         margin-bottom: 24px;
+        font-size: 16px;
         @include laptop {
             height: 56px;
         }
@@ -148,4 +149,10 @@
             align-items: center;
         }
     }
+}
+.no-scroll {
+    overflow: hidden !important;
+}
+.open {
+    display: flex !important;
 }
