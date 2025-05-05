@@ -90,6 +90,7 @@ function initRooms() {
         modules: [Virtual],
         loop: true,
         slidesPerView: 'auto',
+
         breakpoints: {
             1440: {
                 spaceBetween: 21,
@@ -110,12 +111,18 @@ function initRooms() {
         if (slider.slides.length === 3) {
             const customSettings = {
                 loop: true,
-
+                // slidesPerView: 'auto',
                 breakpoints: {
                     1440: {
                         slidesPerView: 'auto',
                         centeredSlides: false,
                         loop: false,
+                    },
+                    769: {
+                        slidesPerView: 'auto',
+                        centeredSlides: false,
+                        loop: false,
+                        spaceBetween: 20,
                     },
                     768: {
                         slidesPerView: 'auto',
@@ -124,9 +131,9 @@ function initRooms() {
                     },
 
                     300: {
-                        slidesPerView: 1.1,
+                        slidesPerView: 'auto',
                         spaceBetween: 20,
-                        loop: false,
+                        loop: true,
                     },
                 },
             };
@@ -137,25 +144,38 @@ function initRooms() {
         if (slider.slides.length === 2) {
             const customSettings = {
                 loop: false,
-                slidesPerView: 2.3,
-                spaceBetween: 21,
-                slidesOffsetBefore: 10,
+                slidesPerView: 'auto',
+                // spaceBetween: 21,
+
                 breakpoints: {
                     1440: {
                         centeredSlides: false,
-                        allowTouchMove: false,
+                        allowTouchMove: true,
+                        slidesOffsetBefore: 0,
+                        slidesPerView: 'auto',
+                    },
+                    769: {
+                        slidesPerView: 'auto',
+                        centeredSlides: false,
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter: 0,
+                        allowTouchMove: true,
+                        spaceBetween: 21,
+                        loop: false,
                     },
                     768: {
                         slidesPerView: 2,
                         centeredSlides: false,
-                        slidesOffsetBefore: 0,
-                        slidesOffsetAfter: 10,
+                        // slidesOffsetBefore: 0,
+                        // slidesOffsetAfter: 0,
                         allowTouchMove: false,
+                        loop: false,
+                        spaceBetween: 21,
                     },
 
                     300: {
-                        slidesPerView: 1.1,
-                        spaceBetween: 20,
+                        slidesPerView: 'auto',
+                        spaceBetween: 21,
                         slidesOffsetBefore: 0,
                     },
                 },
@@ -163,26 +183,75 @@ function initRooms() {
             const newSwttings = { ...slider.params, ...customSettings };
             slider.destroy();
             slider = new Swiper('.rooms-swiper-inner', newSwttings);
+            if (window.innerWidth < 700) {
+                slider.slidesEl.style.cssText = `
+                    justify-content: normal;
+                    
+   
+                `;
+            }
+            if (window.innerWidth > 700 && window.innerWidth < 769) {
+                slider.slidesEl.style.cssText = `
+                    justify-content: center;
+   
+                `;
+                slider.slides.at(-1).style.cssText = `
+                margin-right: 0`;
+            }
+            if (window.innerWidth > 1062 && window.innerWidth < 1260) {
+                slider.slidesEl.style.cssText = `
+                    justify-content: center;
+
+                `;
+                slider.slides.at(-1).style.cssText = `
+                margin-right: 0`;
+            }
+            if (window.innerWidth > 1600) {
+                slider.slidesEl.style.cssText = `
+                    justify-content: center;
+
+                `;
+                slider.slides.at(-1).style.cssText = `
+                margin-right: 0`;
+            }
         }
         if (slider.slides.length === 1) {
             const customSettings = {
                 loop: false,
                 slidesPerView: 1,
+                spaceBetween: 0,
+                breakpoints: {
+                    300: {
+                        spaceBetween: 0,
+                    },
+                },
             };
             const newSwttings = { ...slider.params, ...customSettings };
             slider.destroy();
             slider = new Swiper('.rooms-swiper-inner', newSwttings);
-            if (window.innerWidth > 600 && window.innerWidth < 1260) {
-                slider.slides[0].style.cssText = `
-            max-width: 60%; margin: 0 auto`;
+            if (window.innerWidth <= 769) {
+                slider.slidesEl.style.cssText = `
+                    justify-content: center;
+
+                `;
+            }
+            if (window.innerWidth > 769 && window.innerWidth < 1260) {
+                slider.slidesEl.style.cssText = `
+                justify-content: center;
+
+            `;
             }
             if (window.innerWidth > 1260) {
-                slider.slides[0].style.cssText = `
-            max-width: 1215px; margin: 0 auto`;
+                slider.slidesEl.style.cssText = `
+                justify-content: center;
+
+            `;
             }
             if (window.innerWidth > 1600) {
-                slider.slides[0].style.cssText = `
-            max-width: 1500px; margin: 0 auto`;
+                slider.slidesEl.style.cssText = `
+                justify-content: center;
+
+            `;
             }
         }
     });
