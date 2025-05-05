@@ -1,16 +1,9 @@
 import { Swiper } from 'swiper';
-import {
-    burgerControls,
-    eyeControls,
-    modalControl,
-    openModal,
-    resizeControl,
-    videoControl,
-} from './modules/controls.js';
+import { burgerControls, eyeControls, resizeControl, videoControl } from './modules/controls.js';
 import * as flsFunctions from './modules/functions.js';
 import { pageElements } from './modules/pageElements.js';
 import { SLIDER_SETTINGS } from './modules/settings.js';
-import { roomsSlider } from './modules/sliders.js';
+import { Virtual } from 'swiper/modules';
 
 flsFunctions.isWebp();
 
@@ -35,79 +28,6 @@ const outerSlider = new Swiper('.rooms-swiper-outer', {
     spaceBetween: 40,
     allowTouchMove: false,
 });
-let innerSlider;
-function roominit() {
-    innerSlider = new Swiper('.rooms-swiper-inner', {
-        loop: true,
-        speed: 800,
-        nested: true,
-        noSwiping: false,
-        preventClicks: true,
-        initialSlide: 0,
-        watchOverflow: true,
-        slidesPerView: 'auto',
-
-        breakpoints: {
-            1440: {
-                spaceBetween: 21,
-                centeredSlides: true,
-            },
-            1000: {
-                spaceBetween: 16,
-            },
-            300: {
-                spaceBetween: 20,
-                height: 252,
-                centeredSlides: false,
-            },
-        },
-    });
-
-    innerSlider.forEach(slider => {
-        if (slider.slides.length === 3) {
-            slider.params.loop = false;
-            slider.params.slidesPerView = 'auto';
-            slider.params.centeredSlides = false;
-            slider.originalParams.initialSlide = 2;
-            // slider.params.breakpoints[1440].centeredSlides = false;
-            slider.params.rewind = true;
-            slider.update();
-        }
-        if (slider.slides.length < 3) {
-            slider.params.loop = false;
-            slider.params.slidesPerView = 2;
-            slider.params.centeredSlides = false;
-            slider.update();
-        }
-        if (window.innerWidth < 700) {
-            slider.params.centeredSlides = false;
-            slider.update();
-        }
-
-        if (slider.slides.length === 2) {
-            slider.params.loop = false;
-            slider.params.slidesPerView = 2;
-            slider.originalParams.allowTouchMove = false;
-            slider.originalParams.enabled = false;
-            slider.params.breakpoints[1440].centeredSlides = false;
-
-            slider.update();
-        }
-        if (slider.slides.length < 2) {
-            slider.params.loop = false;
-            slider.params.slidesPerView = 1;
-
-            slider.update();
-        }
-    });
-}
-roominit();
-window.addEventListener(
-    'resize',
-    flsFunctions.debounce(function () {
-        roominit();
-    }, 250)
-);
 
 const paginationSlider = new Swiper('.pagination-slider', {
     enabled: true,
@@ -164,3 +84,88 @@ if (inp) {
         Inputmask({ mask: '+7 999 999-99-99' }).mask(item);
     });
 }
+let innerSlider;
+function initRooms() {
+    innerSlider = new Swiper('.rooms-swiper-inner', {
+        modules: [Virtual],
+        loop: true,
+        slidesPerView: 'auto',
+        breakpoints: {
+            1440: {
+                spaceBetween: 21,
+                centeredSlides: true,
+            },
+            300: {
+                spaceBetween: 20,
+            },
+        },
+    });
+
+    innerSlider.forEach(slider => {
+        if (slider.slides.length === 3) {
+            const customSettings = {
+                loop: false,
+
+                breakpoints: {
+                    1440: {
+                        centeredSlides: false,
+                        slidesPerView: 2.5,
+                    },
+                    300: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 20,
+                    },
+                },
+            };
+            const newSwttings = { ...slider.params, ...customSettings };
+            slider.destroy();
+            slider = new Swiper('.rooms-swiper-inner', newSwttings);
+        }
+        if (slider.slides.length === 2) {
+            const customSettings = {
+                loop: false,
+                slidesPerView: 2.3,
+                spaceBetween: 21,
+                slidesOffsetBefore: 10,
+                breakpoints: {
+                    1440: {
+                        centeredSlides: false,
+                        allowTouchMove: false,
+                    },
+                    300: {
+                        slidesPerView: 1.1,
+                        spaceBetween: 20,
+                        slidesOffsetBefore: 0,
+                    },
+                },
+            };
+            const newSwttings = { ...slider.params, ...customSettings };
+            slider.destroy();
+            slider = new Swiper('.rooms-swiper-inner', newSwttings);
+        }
+        if (slider.slides.length === 1) {
+            const customSettings = {
+                loop: false,
+                slidesPerView: 1,
+            };
+            const newSwttings = { ...slider.params, ...customSettings };
+            slider.destroy();
+            slider = new Swiper('.rooms-swiper-inner', newSwttings);
+            if (window.innerWidth > 1260) {
+                slider.slides[0].style.cssText = `
+            max-width: 1215px; margin: 0 auto`;
+            }
+            if (window.innerWidth > 1600) {
+                slider.slides[0].style.cssText = `
+            max-width: 1500px; margin: 0 auto`;
+            }
+        }
+    });
+}
+initRooms();
+window.addEventListener(
+    'resize',
+    flsFunctions.debounce(function () {
+        initRooms();
+    }, 250)
+);
