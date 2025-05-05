@@ -95,8 +95,13 @@ function initRooms() {
                 spaceBetween: 21,
                 centeredSlides: true,
             },
+            768: {
+                centeredSlides: true,
+                spaceBetween: 21,
+            },
             300: {
                 spaceBetween: 20,
+                centeredSlides: false,
             },
         },
     });
@@ -104,16 +109,24 @@ function initRooms() {
     innerSlider.forEach(slider => {
         if (slider.slides.length === 3) {
             const customSettings = {
-                loop: false,
+                loop: true,
 
                 breakpoints: {
                     1440: {
+                        slidesPerView: 'auto',
                         centeredSlides: false,
-                        slidesPerView: 2.5,
+                        loop: false,
                     },
+                    768: {
+                        slidesPerView: 'auto',
+                        centeredSlides: false,
+                        loop: false,
+                    },
+
                     300: {
                         slidesPerView: 1.1,
                         spaceBetween: 20,
+                        loop: false,
                     },
                 },
             };
@@ -132,6 +145,14 @@ function initRooms() {
                         centeredSlides: false,
                         allowTouchMove: false,
                     },
+                    768: {
+                        slidesPerView: 2,
+                        centeredSlides: false,
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter: 10,
+                        allowTouchMove: false,
+                    },
+
                     300: {
                         slidesPerView: 1.1,
                         spaceBetween: 20,
@@ -151,6 +172,10 @@ function initRooms() {
             const newSwttings = { ...slider.params, ...customSettings };
             slider.destroy();
             slider = new Swiper('.rooms-swiper-inner', newSwttings);
+            if (window.innerWidth > 600 && window.innerWidth < 1260) {
+                slider.slides[0].style.cssText = `
+            max-width: 60%; margin: 0 auto`;
+            }
             if (window.innerWidth > 1260) {
                 slider.slides[0].style.cssText = `
             max-width: 1215px; margin: 0 auto`;

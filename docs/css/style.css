@@ -6627,11 +6627,6 @@ html.with-fancybox body.hide-scrollbar {
     text-align: center;
   }
 
-  .inner-slide {
-    height: 252px;
-    width: 335px;
-  }
-
   .slider-points__point {
     font-size: 14px;
     padding: 8px 16px;
@@ -6954,6 +6949,12 @@ html.with-fancybox body.hide-scrollbar {
     grid-column: 1/2;
     -ms-grid-column-align: self-start;
         justify-self: self-start;
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .inner-slide {
+    height: 400px;
   }
 }
 
@@ -7601,7 +7602,7 @@ html.with-fancybox body.hide-scrollbar {
   }
 
   .rooms-list__item {
-    height: 252px;
+    height: inherit;
   }
 
   .room__resize-btn {
@@ -7611,6 +7612,11 @@ html.with-fancybox body.hide-scrollbar {
     position: absolute;
     bottom: 16px;
     right: 16px;
+  }
+
+  .inner-slide {
+    height: 252px;
+    width: 335px;
   }
 
   .slider-points {
@@ -8114,6 +8120,12 @@ html.with-fancybox body.hide-scrollbar {
   .detail-card__header {
     border-radius: 20px;
     height: 150px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .inner-slide {
+    height: 252px;
   }
 }
 
