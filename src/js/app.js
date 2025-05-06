@@ -1,5 +1,5 @@
 import { Swiper } from 'swiper';
-import { burgerControls, eyeControls, resizeControl, videoControl } from './modules/controls.js';
+import { eyeControls, resizeControl, videoControl } from './modules/controls.js';
 import * as flsFunctions from './modules/functions.js';
 import { pageElements } from './modules/pageElements.js';
 import { SLIDER_SETTINGS } from './modules/settings.js';
@@ -10,7 +10,6 @@ flsFunctions.isWebp();
 const elements = pageElements();
 
 eyeControls(elements);
-burgerControls(elements);
 resizeControl(elements);
 videoControl(elements);
 //sliders

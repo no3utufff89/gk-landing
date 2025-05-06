@@ -2471,73 +2471,6 @@ html.with-fancybox body.hide-scrollbar {
   display: flex !important;
 }
 
-.burger-menu {
-  width: 60px;
-  height: 60px;
-  background: #fff;
-  padding: 23px 10px;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.burger-menu__items {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.burger-menu span {
-  display: block;
-  width: 100%;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 3px;
-  flex: 0 0 3px;
-  height: 3px;
-  background-color: #313534;
-  position: relative;
-  -webkit-transition: top 0.2s 0.2s, bottom 0.2s 0.2s, -webkit-transform 0.2s;
-  transition: top 0.2s 0.2s, bottom 0.2s 0.2s, -webkit-transform 0.2s;
-  transition: transform 0.2s, top 0.2s 0.2s, bottom 0.2s 0.2s;
-  transition: transform 0.2s, top 0.2s 0.2s, bottom 0.2s 0.2s, -webkit-transform 0.2s;
-}
-
-.burger-menu span:first-child {
-  top: 0;
-}
-
-.burger-menu span:last-child {
-  bottom: 0;
-}
-
-.burger-menu.active span {
-  -webkit-transition: top 0.2s, bottom 0.2s, -webkit-transform 0.2s 0.2s;
-  transition: top 0.2s, bottom 0.2s, -webkit-transform 0.2s 0.2s;
-  transition: transform 0.2s 0.2s, top 0.2s, bottom 0.2s;
-  transition: transform 0.2s 0.2s, top 0.2s, bottom 0.2s, -webkit-transform 0.2s 0.2s;
-}
-
-.burger-menu.active span:first-child {
-  top: calc(50% - 1.5px);
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-
-.burger-menu.active span:last-child {
-  bottom: calc(50% - 1.5px);
-  -webkit-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  transform: rotate(-45deg);
-}
-
 .header {
   background-color: #f6f6f6;
   padding-top: 24px;
@@ -5644,14 +5577,6 @@ html.with-fancybox body.hide-scrollbar {
     height: 56px;
   }
 
-  .burger-menu {
-    -ms-grid-column-align: end;
-        justify-self: end;
-    padding: 20.5px 10px;
-    width: 55px;
-    height: 55px;
-  }
-
   .header {
     padding-top: 20px;
     padding-bottom: 21px;
@@ -7390,12 +7315,6 @@ html.with-fancybox body.hide-scrollbar {
   .request-form__btn {
     font-size: 14px;
     height: 48px;
-  }
-
-  .burger-menu {
-    -ms-flex-item-align: auto;
-        -ms-grid-row-align: auto;
-        align-self: auto;
   }
 
   .header {
