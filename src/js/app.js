@@ -133,7 +133,7 @@ function initRooms() {
                     300: {
                         slidesPerView: 'auto',
                         spaceBetween: 20,
-                        loop: true,
+                        loop: false,
                     },
                 },
             };
