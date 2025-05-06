@@ -2471,6 +2471,31 @@ html.with-fancybox body.hide-scrollbar {
   display: flex !important;
 }
 
+.form-error {
+  display: none;
+  font-size: 16px;
+  color: #ac0505;
+  line-height: 116%;
+  text-align: left !important;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.form__item {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1/3;
+  position: relative;
+}
+
+.form__item.error input {
+  border-color: #ac0505;
+}
+
+.form__item.error .form-error {
+  display: block;
+}
+
 .header {
   background-color: #f6f6f6;
   padding-top: 24px;
@@ -6385,6 +6410,14 @@ html.with-fancybox body.hide-scrollbar {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     row-gap: 24px;
+  }
+
+  .form-error {
+    font-size: 14px;
+  }
+
+  .form__item {
+    grid-row: unset;
   }
 
   .header {

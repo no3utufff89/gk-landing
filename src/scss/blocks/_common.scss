@@ -156,3 +156,33 @@
 .open {
     display: flex !important;
 }
+.form-error {
+    display: none;
+    font-size: 16px;
+    color: #ac0505;
+    line-height: 116%;
+    text-align: left !important;
+    margin-top: 5px;
+    margin-left: 5px;
+    @include tablet {
+        font-size: 14px;
+    }
+}
+
+.form {
+    &__item {
+        grid-row: 1/3;
+        position: relative;
+        @include tablet {
+            grid-row: unset;
+        }
+        &.error {
+            input {
+                border-color: #ac0505;
+            }
+            .form-error {
+                display: block;
+            }
+        }
+    }
+}

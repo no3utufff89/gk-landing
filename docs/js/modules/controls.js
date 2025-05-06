@@ -23,11 +23,7 @@ export function eyeControls(elements) {
         });
     });
 }
-export function burgerControls(elements) {
-    elements.burgerBtn.addEventListener('click', () => {
-        elements.burgerBtn.classList.toggle('active');
-    });
-}
+
 export function resizeControl(elements) {
     elements.resizeBtn.forEach(el => el.addEventListener('click', createFancy));
     elements.houseResizeBtn.forEach(el => el.addEventListener('click', createFancy));

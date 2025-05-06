@@ -51,23 +51,34 @@
                     <a href="#" class="link footer-menu__link"> Новости </a>
                 </li>
             </ul>
-            <div class="footer__questions questions">
+            <div class="footer__questions questions form">
                 <p class="questions__title text-gradient">Остались вопросы?</p>
                 <p class="questions__subtitle">Оставьте заявку и мы перезвоним!</p>
-                <form
-                    action=""
-                    class="questions-form footer__form"
-                    onsubmit="event.preventDefault();succsessSubmit(this)"
-                >
-                    <input type="text" class="questions-form__input" placeholder="Имя" />
-                    <div class="questions-form__input-wrapper">
+                <form action="" class="questions-form footer__form form">
+                    <div class="form__item">
+                        <input
+                            type="text"
+                            class="questions-form__input"
+                            placeholder="Имя"
+                            name="name"
+                        />
+                        <div class="form-error phone-error" data-error="" data-error-phone="">
+                            Необходимо заполнить имя
+                        </div>
+                    </div>
+
+                    <div class="form__item">
                         <input
                             type="tel"
                             class="questions-form__input"
                             placeholder="+7 000-000-00-00"
+                            name="phone"
                         />
                         <div class="questions-form__placeholder" style="display: block">
                             <span>+7</span> 000<span>-</span>000<span>-</span>00<span>-</span>00
+                        </div>
+                        <div class="form-error name-error" data-error="" data-error-name="">
+                            Необходимо заполнить телефон
                         </div>
                     </div>
                     <button class="questions-form__btn modal-btn" type="submit">
